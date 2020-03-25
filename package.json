@@ -1,29 +1,40 @@
 {
-  "name": "react-native-mentoring-program",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
-    "start": "react-native start",
-    "test": "jest",
-    "lint": "eslint ."
-  },
-  "dependencies": {
-    "react": "16.9.0",
-    "react-native": "0.61.5"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.6.2",
-    "@babel/runtime": "^7.6.2",
-    "@react-native-community/eslint-config": "^0.0.5",
-    "babel-jest": "^24.9.0",
-    "eslint": "^6.5.1",
-    "jest": "^24.9.0",
-    "metro-react-native-babel-preset": "^0.56.0",
-    "react-test-renderer": "16.9.0"
-  },
-  "jest": {
-    "preset": "react-native"
-  }
+    "name": "react-native-mentoring-program",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "android": "react-native run-android",
+        "ios": "react-native run-ios",
+        "start": "react-native start",
+        "test": "jest",
+        "lint": "eslint ."
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "pretty-quick --staged"
+        }
+    },
+    "dependencies": {
+        "react": "16.9.0",
+        "react-native": "0.61.5"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.6.2",
+        "@babel/runtime": "^7.6.2",
+        "@react-native-community/async-storage": "^1.8.1",
+        "@react-native-community/eslint-config": "^0.0.5",
+        "babel-jest": "^24.9.0",
+        "eslint": "^6.5.1",
+        "husky": "^4.2.3",
+        "jest": "^24.9.0",
+        "metro-react-native-babel-preset": "^0.56.0",
+        "pretty-quick": "^2.0.1",
+        "react-redux": "^7.2.0",
+        "react-test-renderer": "16.9.0",
+        "reactotron-react-native": "^4.0.3",
+        "redux": "^4.0.5"
+    },
+    "jest": {
+        "preset": "react-native"
+    }
 }
