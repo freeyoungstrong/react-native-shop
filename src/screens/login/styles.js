@@ -18,4 +18,8 @@ export const styles = StyleSheet.create({
         marginBottom: 60,
         color: '#00a8f3',
     },
+    navQuestion: {
+        alignSelf: 'flex-end',
+        right: '7.5%',
+    },
 });

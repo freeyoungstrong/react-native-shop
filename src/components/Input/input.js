@@ -3,14 +3,14 @@ import { TextInput } from 'react-native';
 
 import { styles } from './styles';
 
-export const Input = props => {
+export const Input = ({ onChangeText, text, placeholder, secure } = {}) => {
     return (
         <TextInput
             style={styles.input}
-            onChangeText={props.onChangeText}
-            value={props.text}
-            placeholder={props.placeholder}
-            secureTextEntry={props.secure}
+            onChangeText={onChangeText}
+            value={text}
+            placeholder={placeholder}
+            secureTextEntry={secure}
         />
     );
 };

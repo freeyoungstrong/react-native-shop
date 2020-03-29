@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
         backgroundColor: '#118cbf',
         justifyContent: 'center',
     },
-    title: {
+    label: {
         fontSize: 20,
         fontWeight: '600',
         textAlign: 'center',

@@ -6,41 +6,38 @@ import { styles } from './styles';
 import { Input } from '../../components/Input/input';
 import { Button } from '../../components/Button/button';
 import { NavQuestion } from '../../components/NavQuestion/navQuestion';
+import { loc } from '../../assets/locales';
 
 export const LoginScreen = () => {
     const [loginName, onChangeLoginName] = useState('');
     const [password, onChangePassword] = useState('');
     const onPressSignIn = async () => {
+        const formData = new FormData();
+        formData.append('loginname', loginName);
+        formData.append('password', password);
         try {
-            let response = await fetch(
-                `https://34.73.95.65/index.php?rt=account/login&loginname=${loginName}&password=${password}`,
-                {
-                    method: 'POST',
-                    headers: {
-                        Accept: 'application/json',
-                        'Content-Type': 'application/json',
-                    },
-                    // body: JSON.stringify({
-                    //     loginname: loginName,
-                    //     password: password,
-                    // }),
+            const response = await fetch('http://34.73.95.65/index.php?rt=a/account/login', {
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json',
                 },
-            );
-            if (response.status === 1) {
-                return response.success;
+                body: formData,
+            });
+            const result = await response.json();
+            if (result.status === 1) {
+                Alert.alert(loc('login.button.success.title'), result.success);
             } else {
-                throw new Error('Login attempt failed!');
+                Alert.alert(loc('login.button.error.title'), result.error);
             }
         } catch (error) {
-            console.error(error);
+            console.log(error);
         }
     };
-
-    const onPressNavQuestionSignUp = () => {
-        Alert.alert('Moved to RegistrationScreen');
-    };
     const onPressNavQuestionForgotPassword = () => {
-        Alert.alert('Moved to RecoveryPasswordScreen');
+        Alert.alert(loc('login.navQuestion1.move'));
+    };
+    const onPressNavQuestionSignUp = () => {
+        Alert.alert(loc('login.navQuestion2.move'));
     };
     return (
         <KeyboardAwareScrollView
@@ -49,15 +46,15 @@ export const LoginScreen = () => {
             extraHeight={20}
             enableOnAndroid>
             <Text style={styles.title}>Ecommerce Store</Text>
-            <Input onChangeText={onChangeLoginName} value={loginName} placeholder="Login Name" />
-            <Input secure={true} onChangeText={onChangePassword} value={password} placeholder="Password" />
+            <Input onChangeText={onChangeLoginName} value={loginName} placeholder={loc('login.loginName')} />
+            <Input secure={true} onChangeText={onChangePassword} value={password} placeholder={loc('login.password')} />
             <NavQuestion
-                title="Forgot password?"
+                title={loc('login.navQuestion1.title')}
                 onPress={onPressNavQuestionForgotPassword}
-                style={{ alignSelf: 'flex-end', right: '7.5%' }}
+                style={styles.navQuestion}
             />
-            <Button title="SIGN IN" onPress={onPressSignIn} />
-            <NavQuestion title="New here? Sign Up" onPress={onPressNavQuestionSignUp} />
+            <Button title={loc('login.button.title').toUpperCase()} onPress={onPressSignIn} />
+            <NavQuestion title={loc('login.navQuestion2.title')} onPress={onPressNavQuestionSignUp} />
         </KeyboardAwareScrollView>
     );
 };

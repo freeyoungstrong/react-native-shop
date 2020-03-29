@@ -6,6 +6,7 @@ import { styles } from './styles';
 import { Input } from '../../components/Input/input';
 import { Button } from '../../components/Button/button';
 import { NavQuestion } from '../../components/NavQuestion/navQuestion';
+import { loc } from '../../assets/locales';
 
 export const RegistrationScreen = () => {
     const [fullName, onChangeFullName] = useState('');
@@ -13,10 +14,10 @@ export const RegistrationScreen = () => {
     const [password, onChangePassword] = useState('');
     const [confirmPassword, onChangeConfirmPassword] = useState('');
     const onPressSignUp = () => {
-        Alert.alert('You signed up. Congrats!');
+        Alert.alert(loc('registration.button.success.message'));
     };
     const onPressNavQuestion = () => {
-        Alert.alert('You signed up. Congrats!');
+        Alert.alert(loc('registration.navQuestion.move'));
     };
     return (
         <KeyboardAwareScrollView
@@ -25,12 +26,16 @@ export const RegistrationScreen = () => {
             extraHeight={20}
             enableOnAndroid>
             <Text style={styles.title}>Ecommerce Store</Text>
-            <Input onChangeText={onChangeFullName} text={fullName} placeholder="Full Name" />
-            <Input onChangeText={onChangeEmail} value={email} placeholder="Email Address" />
-            <Input onChangeText={onChangePassword} value={password} placeholder="Password" />
-            <Input onChangeText={onChangeConfirmPassword} value={confirmPassword} placeholder="Confirm Password" />
-            <Button title="SIGN UP" onPress={onPressSignUp} />
-            <NavQuestion title="Already have account? Sign In" onPress={onPressNavQuestion} />
+            <Input onChangeText={onChangeFullName} text={fullName} placeholder={loc('registration.fullName')} />
+            <Input onChangeText={onChangeEmail} value={email} placeholder={loc('registration.email')} />
+            <Input onChangeText={onChangePassword} value={password} placeholder={loc('registration.password')} />
+            <Input
+                onChangeText={onChangeConfirmPassword}
+                value={confirmPassword}
+                placeholder={loc('registration.confirmPassword')}
+            />
+            <Button title={loc('registration.button.title').toUpperCase()} onPress={onPressSignUp} />
+            <NavQuestion title={loc('registration.navQuestion.title')} onPress={onPressNavQuestion} />
         </KeyboardAwareScrollView>
     );
 };
