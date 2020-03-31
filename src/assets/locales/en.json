@@ -1,0 +1,48 @@
+{
+    "login": {
+        "title": "Ecommerce Store",
+        "loginName": "Login name",
+        "password": "Password",
+        "navQuestion1": {
+            "title": "Forgot password?",
+            "move": "Moved to recovery password screen"
+        },
+        "navQuestion2": {
+            "title": "New here? Sign up",
+            "move": "Moved to registration screen"
+        },
+        "button": {
+            "title": "Sign in",
+            "error": {
+                "title": "Error",
+                "message": "Login attempt failed!"
+            },
+            "success": {
+                "title": "Success",
+                "message": "Logged in!"
+            }
+        }
+    },
+    "registration": {
+        "title": "Ecommerce Store",
+        "fullName": "Full name",
+        "email": "Email address",
+        "password": "Password",
+        "confirmPassword": "Confirm password",
+        "button": {
+            "title": "Sign up",
+            "error": {
+                "title": "Error",
+                "message": "Something went wrong"
+            },
+            "success": {
+                "title": "Success",
+                "message": "Moved to another screen"
+            }
+        },
+        "navQuestion": {
+            "title": "Already have account? Sign in",
+            "move": "Moved to login screen"
+        }
+    }
+}
