@@ -7,6 +7,7 @@ import 'react-native-gesture-handler';
 import store from './src/store';
 import { LoginScreen } from './src/screens/login/login';
 import { RegistrationScreen } from './src/screens/registration/registration';
+import { routes } from './src/constants/routes';
 
 if (__DEV__) {
     import('./reactotron-config').then(() => console.log('Reactotron Configured'));
@@ -18,8 +19,8 @@ const App = () => {
         <Provider store={store}>
             <NavigationContainer>
                 <Stack.Navigator initialRouteName="Home">
-                    <Stack.Screen name="Login" component={LoginScreen} />
-                    <Stack.Screen name="Registration" component={RegistrationScreen} />
+                    <Stack.Screen name={routes.LOGIN} component={LoginScreen} />
+                    <Stack.Screen name={routes.REGISTRATION} component={RegistrationScreen} />
                 </Stack.Navigator>
             </NavigationContainer>
         </Provider>

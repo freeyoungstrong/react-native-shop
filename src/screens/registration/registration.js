@@ -7,6 +7,7 @@ import { Input } from '../../components/Input/input';
 import { Button } from '../../components/Button/button';
 import { NavQuestion } from '../../components/NavQuestion/navQuestion';
 import { loc } from '../../assets/locales';
+import { routes } from '../../constants/routes';
 
 export const RegistrationScreen = ({ navigation }) => {
     const [fullName, onChangeFullName] = useState('');
@@ -17,7 +18,7 @@ export const RegistrationScreen = ({ navigation }) => {
         Alert.alert(loc('registration.button.success.message'));
     };
     const onPressNavQuestion = () => {
-        navigation.navigate('Login');
+        navigation.navigate(routes.LOGIN);
     };
     return (
         <KeyboardAwareScrollView
