@@ -7,8 +7,9 @@ import { Input } from '../../components/Input/input';
 import { Button } from '../../components/Button/button';
 import { NavQuestion } from '../../components/NavQuestion/navQuestion';
 import { loc } from '../../assets/locales';
+import { routes } from '../../constants/routes';
 
-export const LoginScreen = () => {
+export const LoginScreen = ({ navigation }) => {
     const [loginName, onChangeLoginName] = useState('');
     const [password, onChangePassword] = useState('');
     const onPressSignIn = async () => {
@@ -37,7 +38,7 @@ export const LoginScreen = () => {
         Alert.alert(loc('login.navQuestion1.move'));
     };
     const onPressNavQuestionSignUp = () => {
-        Alert.alert(loc('login.navQuestion2.move'));
+        navigation.navigate(routes.REGISTRATION);
     };
     return (
         <KeyboardAwareScrollView
