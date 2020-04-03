@@ -15,7 +15,7 @@ export const RegistrationScreen = ({ navigation }) => {
     const [password, onChangePassword] = useState('');
     const [confirmPassword, onChangeConfirmPassword] = useState('');
     const onPressSignUp = () => {
-        Alert.alert(loc('registration.button.success.message'));
+        navigation.navigate(routes.MAIN);
     };
     const onPressNavQuestion = () => {
         navigation.navigate(routes.LOGIN);
@@ -35,7 +35,12 @@ export const RegistrationScreen = ({ navigation }) => {
                 value={confirmPassword}
                 placeholder={loc('registration.confirmPassword')}
             />
-            <Button title={loc('registration.button.title').toUpperCase()} onPress={onPressSignUp} />
+            <Button
+                title={loc('registration.button.title').toUpperCase()}
+                onPress={onPressSignUp}
+                buttonStyle={styles.buttonStyle}
+                buttonStyleTitle={styles.buttonTitle}
+            />
             <NavQuestion title={loc('registration.navQuestion.title')} onPress={onPressNavQuestion} />
         </KeyboardAwareScrollView>
     );

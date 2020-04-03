@@ -44,5 +44,17 @@
             "title": "Already have account? Sign in",
             "move": "Moved to login screen"
         }
+    },
+    "productDetails": {
+        "selectColor": "Select color:",
+        "description": "Description:",
+        "buttonWishlist": {
+            "title": "Wishlist",
+            "message": "Product added to your wishlist successully"
+        },
+        "buttonAddToCart": {
+            "title": "Add to cart",
+            "message": "Product added to your cart"
+        }
     }
 }
