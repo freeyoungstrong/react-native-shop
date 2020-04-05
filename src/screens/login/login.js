@@ -54,7 +54,12 @@ export const LoginScreen = ({ navigation }) => {
                 onPress={onPressNavQuestionForgotPassword}
                 style={styles.navQuestion}
             />
-            <Button title={loc('login.button.title').toUpperCase()} onPress={onPressSignIn} />
+            <Button
+                title={loc('login.button.title').toUpperCase()}
+                onPress={onPressSignIn}
+                buttonStyle={styles.buttonStyle}
+                buttonStyleTitle={styles.buttonTitle}
+            />
             <NavQuestion title={loc('login.navQuestion2.title')} onPress={onPressNavQuestionSignUp} />
         </KeyboardAwareScrollView>
     );

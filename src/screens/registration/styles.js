@@ -22,4 +22,17 @@ export const styles = StyleSheet.create({
         color: '#4f73f9',
         fontSize: 20,
     },
+    buttonStyle: {
+        width: '85%',
+        height: 40,
+        marginVertical: 20,
+        backgroundColor: '#118cbf',
+        justifyContent: 'center',
+    },
+    buttonTitle: {
+        fontSize: 20,
+        fontWeight: '600',
+        textAlign: 'center',
+        color: 'white',
+    },
 });
