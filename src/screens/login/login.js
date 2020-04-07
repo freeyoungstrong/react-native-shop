@@ -8,8 +8,10 @@ import { Button } from '../../components/Button/button';
 import { NavQuestion } from '../../components/NavQuestion/navQuestion';
 import { loc } from '../../assets/locales';
 import { routes } from '../../constants/routes';
+import { AuthContext } from '../../context/context';
 
 export const LoginScreen = ({ navigation }) => {
+    const { signIn } = React.useContext(AuthContext);
     const [loginName, onChangeLoginName] = useState('');
     const [password, onChangePassword] = useState('');
     const onPressSignIn = async () => {
@@ -26,7 +28,7 @@ export const LoginScreen = ({ navigation }) => {
             });
             const result = await response.json();
             if (result.status === 1) {
-                Alert.alert(loc('login.button.success.title'), result.success);
+                navigation.navigate(routes.MAIN);
             } else {
                 Alert.alert(loc('login.button.error.title'), result.error);
             }
@@ -38,7 +40,7 @@ export const LoginScreen = ({ navigation }) => {
         Alert.alert(loc('login.navQuestion1.move'));
     };
     const onPressNavQuestionSignUp = () => {
-        navigation.navigate(routes.REGISTRATION);
+        navigation.navigate(routes.REGISTRATION, { screen: routes.REGISTRATION });
     };
     return (
         <KeyboardAwareScrollView
@@ -56,7 +58,8 @@ export const LoginScreen = ({ navigation }) => {
             />
             <Button
                 title={loc('login.button.title').toUpperCase()}
-                onPress={onPressSignIn}
+                // onPress={onPressSignIn}
+                onPress={signIn} //this is temporary logic
                 buttonStyle={styles.buttonStyle}
                 buttonStyleTitle={styles.buttonTitle}
             />
