@@ -2,8 +2,8 @@ import React from 'react';
 import { View, Text, ScrollView, Alert } from 'react-native';
 
 import { styles } from './styles';
-import { Button } from '../../components/Button/button';
-import { loc } from '../../assets/locales';
+import { Button } from 'shared/components';
+import { loc } from 'shared/assets';
 
 const product = {
     id: '1',

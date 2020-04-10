@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { View, TouchableOpacity } from 'react-native';
 
-import { Product } from '../../components/Product/product';
-import { routes } from '../../constants/routes';
+import { Product } from 'shared/components';
+import { routes } from 'shared/constants';
 import { styles } from './styles';
 
 const product1 = {

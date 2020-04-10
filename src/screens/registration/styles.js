@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native';
 
+import { colors } from 'shared/assets';
+
 export const styles = StyleSheet.create({
     scrollView: {
         flex: 1,
@@ -8,7 +10,7 @@ export const styles = StyleSheet.create({
         flexGrow: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#e3cad8',
+        backgroundColor: colors.pink,
     },
     title: {
         fontSize: 40,
@@ -16,23 +18,23 @@ export const styles = StyleSheet.create({
         marginHorizontal: 60,
         textAlign: 'center',
         marginBottom: 60,
-        color: '#00a8f3',
+        color: colors.seaBlue,
     },
     moveToSignIn: {
-        color: '#4f73f9',
+        color: colors.blue,
         fontSize: 20,
     },
     buttonStyle: {
         width: '85%',
         height: 40,
         marginVertical: 20,
-        backgroundColor: '#118cbf',
+        backgroundColor: colors.seaBlue,
         justifyContent: 'center',
     },
     buttonTitle: {
         fontSize: 20,
         fontWeight: '600',
         textAlign: 'center',
-        color: 'white',
+        color: colors.white,
     },
 });
