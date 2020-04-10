@@ -8,8 +8,10 @@ import { Button } from '../../components/Button/button';
 import { NavQuestion } from '../../components/NavQuestion/navQuestion';
 import { loc } from '../../assets/locales';
 import { routes } from '../../constants/routes';
+import { AuthContext } from '../../context/context';
 
 export const RegistrationScreen = ({ navigation }) => {
+    const { signUp } = React.useContext(AuthContext);
     const [fullName, onChangeFullName] = useState('');
     const [email, onChangeEmail] = useState('');
     const [password, onChangePassword] = useState('');
@@ -37,7 +39,8 @@ export const RegistrationScreen = ({ navigation }) => {
             />
             <Button
                 title={loc('registration.button.title').toUpperCase()}
-                onPress={onPressSignUp}
+                // onPress={onPressSignUp}
+                onPress={signUp} // this is temporary logic
                 buttonStyle={styles.buttonStyle}
                 buttonStyleTitle={styles.buttonTitle}
             />
