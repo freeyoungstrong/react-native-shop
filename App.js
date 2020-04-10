@@ -5,13 +5,10 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import 'react-native-gesture-handler';
 
-import store from './src/redux/store';
-import { LoginScreen } from './src/screens/login/login';
-import { RegistrationScreen } from './src/screens/registration/registration';
-import { Main } from './src/screens/main/main';
-import { ProductDetails } from './src/screens/productDetails/productDetails';
-import { routes } from './src/constants/routes';
-import { AuthContext } from './src/context/context';
+import store from 'shared/redux/store';
+import { LoginScreen, RegistrationScreen, Main, ProductDetails } from 'screens';
+import { routes } from 'shared/constants';
+import { AuthContext } from 'shared/context';
 
 if (__DEV__) {
     import('./reactotron-config').then(() => console.log('Reactotron Configured'));

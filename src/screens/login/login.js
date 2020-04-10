@@ -3,12 +3,10 @@ import { Text, Alert } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 import { styles } from './styles';
-import { Input } from '../../components/Input/input';
-import { Button } from '../../components/Button/button';
-import { NavQuestion } from '../../components/NavQuestion/navQuestion';
-import { loc } from '../../assets/locales';
-import { routes } from '../../constants/routes';
-import { AuthContext } from '../../context/context';
+import { Input, Button, NavQuestion } from 'shared/components';
+import { loc } from 'shared/assets';
+import { routes } from 'shared/constants';
+import { AuthContext } from 'shared/context';
 
 export const LoginScreen = ({ navigation }) => {
     const { signIn } = React.useContext(AuthContext);

@@ -1,13 +1,15 @@
 import { StyleSheet } from 'react-native';
 
+import { colors } from 'shared/assets';
+
 export const styles = StyleSheet.create({
     wrap: {
         flex: 1,
-        backgroundColor: 'grey',
+        backgroundColor: colors.gray,
     },
     container: {
         marginVertical: 5,
-        backgroundColor: 'white',
+        backgroundColor: colors.white,
     },
     image: {
         width: '60%',
@@ -35,7 +37,7 @@ export const styles = StyleSheet.create({
         margin: 10,
         fontSize: 20,
         fontWeight: '600',
-        color: '#118cbf',
+        color: colors.seaBlue,
     },
     description: {
         marginHorizontal: 10,
@@ -46,41 +48,41 @@ export const styles = StyleSheet.create({
         width: '20%',
         height: 30,
         margin: 10,
-        backgroundColor: 'grey',
+        backgroundColor: colors.gray,
         justifyContent: 'center',
     },
     buttonColorOfDeviceTitle: {
         fontSize: 18,
         fontWeight: '100',
         textAlign: 'center',
-        color: 'black',
+        color: colors.black,
     },
     buttonWishListStyle: {
         width: '50%',
         height: 40,
         marginVertical: 5,
         borderWidth: 1,
-        backgroundColor: 'white',
+        backgroundColor: colors.white,
         justifyContent: 'center',
     },
     buttonWishListTitle: {
         fontSize: 18,
         fontWeight: '400',
         textAlign: 'center',
-        color: 'black',
+        color: colors.black,
     },
 
     buttonAddToCartStyle: {
         width: '50%',
         height: 40,
         marginVertical: 5,
-        backgroundColor: '#118cbf',
+        backgroundColor: colors.seaBlue,
         justifyContent: 'center',
     },
     buttonAddToCartTitle: {
         fontSize: 18,
         fontWeight: '600',
         textAlign: 'center',
-        color: 'white',
+        color: colors.white,
     },
 });

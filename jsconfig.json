@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./src",
+        "paths": {
+            "shared/*": ["shared/*"],
+            "screens/*": ["screens/*"]
+        }
+    },
+    "exclude": ["node_modules", "metro.config.js"]
+}
