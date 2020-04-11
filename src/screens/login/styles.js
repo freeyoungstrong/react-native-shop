@@ -10,7 +10,6 @@ export const styles = StyleSheet.create({
         flexGrow: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        height: '100%',
     },
     title: {
         fontSize: 40,
