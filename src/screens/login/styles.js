@@ -10,15 +10,14 @@ export const styles = StyleSheet.create({
         flexGrow: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: colors.pink,
     },
     title: {
         fontSize: 40,
-        fontWeight: '500',
         marginHorizontal: 60,
         textAlign: 'center',
         marginBottom: 60,
         color: colors.seaBlue,
+        fontFamily: 'Roboto-Regular',
     },
     navQuestion: {
         alignSelf: 'flex-end',
@@ -33,8 +32,8 @@ export const styles = StyleSheet.create({
     },
     buttonTitle: {
         fontSize: 20,
-        fontWeight: '600',
         textAlign: 'center',
         color: colors.white,
+        fontFamily: 'Roboto-Bold',
     },
 });

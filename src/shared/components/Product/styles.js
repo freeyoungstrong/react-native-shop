@@ -20,12 +20,12 @@ export const styles = StyleSheet.create({
     },
     title: {
         fontSize: 15,
-        fontWeight: '400',
         textAlign: 'center',
+        fontFamily: 'Roboto-Regular',
     },
     cost: {
         fontSize: 15,
-        fontWeight: '600',
         textAlign: 'center',
+        fontFamily: 'Roboto-Bold',
     },
 });
