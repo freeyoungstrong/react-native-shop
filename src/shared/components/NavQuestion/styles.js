@@ -9,5 +9,6 @@ export const styles = StyleSheet.create({
     lable: {
         color: colors.blue,
         fontSize: 20,
+        fontFamily: 'Roboto-Regular',
     },
 });

@@ -22,13 +22,13 @@ export const styles = StyleSheet.create({
         marginLeft: '5%',
         marginBottom: '2%',
         fontSize: 20,
-        fontWeight: '400',
+        fontFamily: 'Roboto-Regular',
     },
     costOfDevice: {
         marginLeft: '5%',
         marginBottom: '5%',
         fontSize: 18,
-        fontWeight: '600',
+        fontFamily: 'Roboto-Bold',
     },
     buttons: {
         flexDirection: 'row',
@@ -36,8 +36,8 @@ export const styles = StyleSheet.create({
     title: {
         margin: 10,
         fontSize: 20,
-        fontWeight: '600',
         color: colors.seaBlue,
+        fontFamily: 'Roboto-Bold',
     },
     description: {
         marginHorizontal: 10,
@@ -53,7 +53,7 @@ export const styles = StyleSheet.create({
     },
     buttonColorOfDeviceTitle: {
         fontSize: 18,
-        fontWeight: '100',
+        fontFamily: 'Roboto-Thin',
         textAlign: 'center',
         color: colors.black,
     },
@@ -67,9 +67,9 @@ export const styles = StyleSheet.create({
     },
     buttonWishListTitle: {
         fontSize: 18,
-        fontWeight: '400',
         textAlign: 'center',
         color: colors.black,
+        fontFamily: 'Roboto-Regular',
     },
 
     buttonAddToCartStyle: {
@@ -81,8 +81,8 @@ export const styles = StyleSheet.create({
     },
     buttonAddToCartTitle: {
         fontSize: 18,
-        fontWeight: '600',
         textAlign: 'center',
         color: colors.white,
+        fontFamily: 'Roboto-Bold',
     },
 });

@@ -9,6 +9,7 @@ import store from 'shared/redux/store';
 import { LoginScreen, RegistrationScreen, Main, ProductDetails } from 'screens';
 import { routes } from 'shared/constants';
 import { AuthContext } from 'shared/context';
+import { colors } from 'shared/assets';
 
 if (__DEV__) {
     import('./reactotron-config').then(() => console.log('Reactotron Configured'));
@@ -28,8 +29,23 @@ const HomeStack = createStackNavigator();
 const HomeStackScreen = () => {
     return (
         <HomeStack.Navigator>
-            <HomeStack.Screen name={routes.MAIN} component={Main} />
-            <HomeStack.Screen name={routes.PRODUCT_DETAILS} component={ProductDetails} />
+            <HomeStack.Screen
+                name={routes.MAIN}
+                component={Main}
+                options={{
+                    headerStyle: { backgroundColor: colors.lightBlue, height: 100 },
+                    headerTintColor: colors.white,
+                    title: 'Ecommerse Store',
+                }}
+            />
+            <HomeStack.Screen
+                name={routes.PRODUCT_DETAILS}
+                component={ProductDetails}
+                options={{
+                    headerStyle: { backgroundColor: colors.lightBlue },
+                    title: null,
+                }}
+            />
         </HomeStack.Navigator>
     );
 };
@@ -38,8 +54,15 @@ const AuthStack = createStackNavigator();
 const AuthStackScreen = () => {
     return (
         <AuthStack.Navigator>
-            <AuthStack.Screen name={routes.LOGIN} component={LoginScreen} />
-            <AuthStack.Screen name={routes.REGISTRATION} component={RegistrationScreen} />
+            <AuthStack.Screen name={routes.LOGIN} component={LoginScreen} options={{ headerShown: false }} />
+            <AuthStack.Screen
+                name={routes.REGISTRATION}
+                component={RegistrationScreen}
+                options={{
+                    headerStyle: { backgroundColor: colors.lightBlue },
+                    title: null,
+                }}
+            />
         </AuthStack.Navigator>
     );
 };
@@ -49,9 +72,9 @@ const RootStackScreen = ({ userToken }) => {
     return (
         <RootStack.Navigator>
             {userToken ? (
-                <RootStack.Screen name="App" component={DrawerScreen} />
+                <RootStack.Screen name="App" component={DrawerScreen} options={{ headerShown: false }} />
             ) : (
-                <RootStack.Screen name="Auth" component={AuthStackScreen} />
+                <RootStack.Screen name="Auth" component={AuthStackScreen} options={{ headerShown: false }} />
             )}
         </RootStack.Navigator>
     );
