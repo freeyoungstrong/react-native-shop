@@ -82,7 +82,6 @@ const RootStackScreen = ({ userToken }) => {
 
 const App = () => {
     const [userToken, setUserToken] = React.useState(null);
-
     const authContext = React.useMemo(() => {
         return {
             signIn: () => {
