@@ -6,7 +6,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import 'react-native-gesture-handler';
 
 import store from 'shared/redux/store';
-import { LoginScreen, RegistrationScreen, Main, ProductDetails } from 'screens';
+import { LoginScreen, RegistrationScreen, Main, ProductDetails, WelcomeScreen } from 'screens';
 import { routes } from 'shared/constants';
 import { AuthContext } from 'shared/context';
 import { colors } from 'shared/assets';
@@ -54,6 +54,7 @@ const AuthStack = createStackNavigator();
 const AuthStackScreen = () => {
     return (
         <AuthStack.Navigator>
+            <AuthStack.Screen name={routes.WELCOME} component={WelcomeScreen} options={{ headerShown: false }} />
             <AuthStack.Screen name={routes.LOGIN} component={LoginScreen} options={{ headerShown: false }} />
             <AuthStack.Screen
                 name={routes.REGISTRATION}
