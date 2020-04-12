@@ -3,14 +3,10 @@ import { StyleSheet } from 'react-native';
 import { colors } from 'shared/assets';
 
 export const styles = StyleSheet.create({
-    scrollView: {
+    container: {
         flex: 1,
-    },
-    scrollContent: {
-        flexGrow: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: colors.pink,
     },
     buttonStyle: {
         width: '85%',
@@ -24,5 +20,9 @@ export const styles = StyleSheet.create({
         textAlign: 'center',
         color: colors.white,
         fontFamily: 'Roboto-Bold',
+    },
+    animation: {
+        position: 'absolute',
+        bottom: '20%',
     },
 });

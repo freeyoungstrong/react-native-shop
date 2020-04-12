@@ -1,7 +1,7 @@
 import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
+import LottieView from 'lottie-react-native';
 
-import { LottieAnimation } from './LottieAnimation';
 import { styles } from './styles';
 import { Button } from 'shared/components';
 import { loc } from 'shared/assets';
@@ -18,8 +18,8 @@ export const WelcomeScreen = ({ navigation }) => {
     return (
         <LinearGradient
             colors={[colors.lightBlue, colors.lightPurple, colors.lightPink, colors.lightOrange]}
-            style={styles.scrollContent}>
-            <LottieAnimation />
+            style={styles.container}>
+            <LottieView source={require('./animation.json')} style={styles.animation} autoPlay loop />
             <Button
                 onPress={onPressLogin}
                 buttonStyle={styles.buttonStyle}
