@@ -14,7 +14,7 @@ export const Button = ({ title, onPress, buttonStyle, buttonStyleTitle } = {}) =
             friction: 3,
             tension: 40,
         }).start();
-        setTimeout(onPress, 1000);
+        onPress();
     };
     const animatedStyle = {
         transform: [{ scale: animatedValue }],
