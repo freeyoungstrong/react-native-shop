@@ -4,7 +4,7 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 import LinearGradient from 'react-native-linear-gradient';
 
 import { styles } from './styles';
-import { Input, Button, NavQuestion } from 'shared/components';
+import { Input, Button, NavQuestion, ModalView } from 'shared/components';
 import { loc } from 'shared/assets';
 import { routes } from 'shared/constants';
 import { AuthContext } from 'shared/context';
@@ -14,6 +14,7 @@ export const LoginScreen = ({ navigation }) => {
     const { signIn } = React.useContext(AuthContext);
     const [loginName, onChangeLoginName] = useState('');
     const [password, onChangePassword] = useState('');
+    const [modalVisible, setModalVisible] = useState(false);
     const onPressSignIn = async () => {
         const formData = new FormData();
         formData.append('loginname', loginName);
@@ -30,7 +31,7 @@ export const LoginScreen = ({ navigation }) => {
             if (result.status === 1) {
                 navigation.navigate(routes.MAIN);
             } else {
-                Alert.alert(loc('login.button.error.title'), result.error);
+                setModalVisible(true);
             }
         } catch (error) {
             console.log(error);
@@ -42,6 +43,9 @@ export const LoginScreen = ({ navigation }) => {
     const onPressNavQuestionSignUp = () => {
         navigation.navigate(routes.REGISTRATION, { screen: routes.REGISTRATION });
     };
+    const opacityStyle = {
+        opacity: 0.5,
+    };
     return (
         // <KeyboardAwareScrollView
         // style={styles.scrollView}
@@ -52,7 +56,13 @@ export const LoginScreen = ({ navigation }) => {
         // TODO: KeyboardAwareScrollView + gradient background
         <LinearGradient
             colors={[colors.lightBlue, colors.lightPurple, colors.lightPink, colors.lightOrange]}
-            style={styles.scrollContent}>
+            style={modalVisible ? [styles.scrollContent, opacityStyle] : styles.scrollContent}>
+            <ModalView
+                visible={modalVisible}
+                onClose={setModalVisible}
+                title={loc('login.button.error.title')}
+                description={loc('login.button.error.message')}
+            />
             <Text style={styles.title}>{loc('login.title')}</Text>
             <Input onChangeText={onChangeLoginName} value={loginName} placeholder={loc('login.loginName')} />
             <Input secure={true} onChangeText={onChangePassword} value={password} placeholder={loc('login.password')} />
@@ -63,8 +73,8 @@ export const LoginScreen = ({ navigation }) => {
             />
             <Button
                 title={loc('login.button.title').toUpperCase()}
-                // onPress={onPressSignIn}
-                onPress={signIn} //this is temporary logic
+                onPress={onPressSignIn}
+                // onPress={signIn} //this is temporary logic
                 buttonStyle={styles.buttonStyle}
                 buttonStyleTitle={styles.buttonTitle}
             />

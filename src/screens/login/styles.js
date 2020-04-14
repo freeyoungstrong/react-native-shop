@@ -27,6 +27,7 @@ export const styles = StyleSheet.create({
         width: '85%',
         height: 40,
         marginVertical: 20,
+        borderRadius: 10,
         backgroundColor: colors.seaBlue,
         justifyContent: 'center',
     },
