@@ -63,5 +63,9 @@
             "title": "Add to cart",
             "message": "Product added to your cart"
         }
+    },
+    "ask-internet": {
+        "title": "No Internet connection!",
+        "description": "Please check your Internet connection and try again."
     }
 }

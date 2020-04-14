@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { Text } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import LinearGradient from 'react-native-linear-gradient';
+import NetInfo from '@react-native-community/netinfo';
 
 import { styles } from './styles';
-import { Input, Button, NavQuestion } from 'shared/components';
+import { Input, Button, NavQuestion, ModalView } from 'shared/components';
 import { loc } from 'shared/assets';
 import { routes } from 'shared/constants';
 import { AuthContext } from 'shared/context';
@@ -16,8 +17,15 @@ export const RegistrationScreen = ({ navigation }) => {
     const [email, onChangeEmail] = useState('');
     const [password, onChangePassword] = useState('');
     const [confirmPassword, onChangeConfirmPassword] = useState('');
+    const [modalAskInternetVisible, setModalAskInternetVisible] = useState(false);
     const onPressSignUp = () => {
-        navigation.navigate(routes.MAIN);
+        NetInfo.fetch().then(state => {
+            if (!state.isConnected) {
+                setModalAskInternetVisible(true);
+            } else {
+                navigation.navigate(routes.MAIN);
+            }
+        });
     };
     const onPressNavQuestion = () => {
         navigation.navigate(routes.LOGIN);
@@ -33,6 +41,12 @@ export const RegistrationScreen = ({ navigation }) => {
         <LinearGradient
             colors={[colors.lightBlue, colors.lightPurple, colors.lightPink, colors.lightOrange]}
             style={styles.scrollContent}>
+            <ModalView
+                visible={modalAskInternetVisible}
+                onClose={setModalAskInternetVisible}
+                title={loc('ask-internet.title')}
+                description={loc('ask-internet.description')}
+            />
             <Text style={styles.title}>{loc('registration.title')}</Text>
             <Input onChangeText={onChangeFullName} text={fullName} placeholder={loc('registration.fullName')} />
             <Input onChangeText={onChangeEmail} value={email} placeholder={loc('registration.email')} />
@@ -44,8 +58,8 @@ export const RegistrationScreen = ({ navigation }) => {
             />
             <Button
                 title={loc('registration.button.title').toUpperCase()}
-                // onPress={onPressSignUp}
-                onPress={signUp} // this is temporary logic
+                onPress={onPressSignUp}
+                // onPress={signUp} // this is temporary logic
                 buttonStyle={styles.buttonStyle}
                 buttonStyleTitle={styles.buttonTitle}
             />
