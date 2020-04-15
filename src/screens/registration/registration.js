@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { Text } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import LinearGradient from 'react-native-linear-gradient';
@@ -18,7 +18,7 @@ export const RegistrationScreen = ({ navigation }) => {
     const [password, onChangePassword] = useState('');
     const [confirmPassword, onChangeConfirmPassword] = useState('');
     const [modalAskInternetVisible, setModalAskInternetVisible] = useState(false);
-    const onPressSignUp = () => {
+    const onPressSignUp = useCallback(() => {
         NetInfo.fetch().then(state => {
             if (!state.isConnected) {
                 setModalAskInternetVisible(true);
@@ -26,10 +26,10 @@ export const RegistrationScreen = ({ navigation }) => {
                 navigation.navigate(routes.MAIN);
             }
         });
-    };
-    const onPressNavQuestion = () => {
+    }, []);
+    const onPressNavQuestion = useCallback(() => {
         navigation.navigate(routes.LOGIN);
-    };
+    }, []);
     return (
         // <KeyboardAwareScrollView
         //     style={styles.scrollView}

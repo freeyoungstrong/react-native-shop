@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { Text, Alert, Vibration } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import LinearGradient from 'react-native-linear-gradient';
@@ -7,9 +7,10 @@ import NetInfo from '@react-native-community/netinfo';
 import { styles } from './styles';
 import { Input, Button, NavQuestion, ModalView } from 'shared/components';
 import { loc } from 'shared/assets';
-import { routes } from 'shared/constants';
+import { routes, USER } from 'shared/constants';
 import { AuthContext } from 'shared/context';
 import { colors } from 'shared/assets';
+import { storeData } from 'shared/utils';
 
 const ONE_SECOND_IN_MS = 1000;
 
@@ -20,7 +21,7 @@ export const LoginScreen = ({ navigation }) => {
     const [modalVisible, setModalVisible] = useState(false);
     const [modalAskInternetVisible, setModalAskInternetVisible] = useState(false);
 
-    const onPressSignIn = async () => {
+    const onPressSignIn = useCallback(async () => {
         const formData = new FormData();
         formData.append('loginname', loginName);
         formData.append('password', password);
@@ -39,6 +40,7 @@ export const LoginScreen = ({ navigation }) => {
             });
             const result = await response.json();
             if (result.status === 1) {
+                await storeData(USER, `${result.userToken}`);
                 navigation.navigate(routes.MAIN);
             } else {
                 setModalVisible(true);
@@ -47,13 +49,13 @@ export const LoginScreen = ({ navigation }) => {
         } catch (error) {
             console.log(error);
         }
-    };
-    const onPressNavQuestionForgotPassword = () => {
+    }, []);
+    const onPressNavQuestionForgotPassword = useCallback(() => {
         Alert.alert(loc('login.navQuestion1.move'));
-    };
-    const onPressNavQuestionSignUp = () => {
-        navigation.navigate(routes.REGISTRATION, { screen: routes.REGISTRATION });
-    };
+    }, []);
+    const onPressNavQuestionSignUp = useCallback(() => {
+        navigation.navigate(routes.REGISTRATION);
+    }, []);
     const opacityStyle = {
         opacity: 0.5,
     };

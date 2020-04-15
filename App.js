@@ -55,7 +55,11 @@ const AuthStackScreen = () => {
     return (
         <AuthStack.Navigator>
             <AuthStack.Screen name={routes.WELCOME} component={WelcomeScreen} options={{ headerShown: false }} />
-            <AuthStack.Screen name={routes.LOGIN} component={LoginScreen} options={{ headerShown: false }} />
+            <AuthStack.Screen
+                name={routes.LOGIN}
+                component={LoginScreen}
+                options={{ gestureEnabled: false, headerShown: false }}
+            />
             <AuthStack.Screen
                 name={routes.REGISTRATION}
                 component={RegistrationScreen}
