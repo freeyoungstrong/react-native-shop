@@ -9,7 +9,8 @@
         "test": "jest",
         "lint": "eslint .",
         "react-devtools": "react-devtools",
-        "reinstall": "rm -rf node_modules && npm install && cd ios && rm -rf Pods && pod install"
+        "reinstall": "rm -rf node_modules && npm install && cd ios && rm -rf Pods && pod install",
+        "lint-fix": "eslint . --fix"
     },
     "husky": {
         "hooks": {

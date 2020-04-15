@@ -1,4 +1,7 @@
 {
+    "common": {
+        "ok": "OK"
+    },
     "login": {
         "title": "Ecommerce Store",
         "loginName": "Login name",
@@ -15,7 +18,7 @@
             "title": "Sign in",
             "error": {
                 "title": "Error",
-                "message": "Login attempt failed!"
+                "message": "Login attempt failed! Please try again."
             },
             "success": {
                 "title": "Success",
