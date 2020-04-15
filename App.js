@@ -82,14 +82,13 @@ const RootStackScreen = ({ userToken }) => {
 
 const App = () => {
     const [userToken, setUserToken] = React.useState(null);
-
     const authContext = React.useMemo(() => {
         return {
             signIn: () => {
-                setUserToken('asdf');
+                setTimeout(() => setUserToken('asdf'), 500); //imitation of request to the server
             },
             signUp: () => {
-                setUserToken('asdf');
+                setTimeout(() => setUserToken('asdf'), 500); //imitation of request to the serve
             },
         };
     }, []);

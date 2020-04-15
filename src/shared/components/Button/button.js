@@ -1,10 +1,29 @@
 import React from 'react';
-import { Text, TouchableOpacity } from 'react-native';
+import { Text, Animated, TouchableWithoutFeedback } from 'react-native';
 
 export const Button = ({ title, onPress, buttonStyle, buttonStyleTitle } = {}) => {
+    const animatedValue = new Animated.Value(1);
+    const onPressIn = () => {
+        Animated.spring(animatedValue, {
+            toValue: 0.5,
+        }).start();
+    };
+    const onPressOut = () => {
+        Animated.spring(animatedValue, {
+            toValue: 1,
+            friction: 3,
+            tension: 40,
+        }).start();
+        onPress();
+    };
+    const animatedStyle = {
+        transform: [{ scale: animatedValue }],
+    };
     return (
-        <TouchableOpacity style={buttonStyle} onPress={onPress}>
-            <Text style={buttonStyleTitle}>{title}</Text>
-        </TouchableOpacity>
+        <TouchableWithoutFeedback onPressIn={onPressIn} onPressOut={onPressOut}>
+            <Animated.View style={[buttonStyle, animatedStyle]}>
+                <Text style={buttonStyleTitle}>{title}</Text>
+            </Animated.View>
+        </TouchableWithoutFeedback>
     );
 };
