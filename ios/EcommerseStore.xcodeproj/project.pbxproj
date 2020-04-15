@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* AwesomeProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AwesomeProjectTests.m */; };
+		00E356F31AD99517003FC87E /* EcommerseStoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* EcommerseStoreTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -18,17 +18,17 @@
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2DCD954D1E0B4F2C00145EB5 /* AwesomeProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AwesomeProjectTests.m */; };
+		2DCD954D1E0B4F2C00145EB5 /* EcommerseStoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* EcommerseStoreTests.m */; };
 		4C50FE99C6794CBFA26D12B2 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 232A7DF06496481FB9CDC84C /* Roboto-Medium.ttf */; };
 		7E2AE564C89D41CCA970C5C4 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 488311D0905A4EDBA2B11B37 /* Roboto-Thin.ttf */; };
-		861A092A169AF7E23FB7530B /* libPods-AwesomeProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25DF75C2DE862C2E4C11496D /* libPods-AwesomeProject.a */; };
+		861A092A169AF7E23FB7530B /* libPods-EcommerseStore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25DF75C2DE862C2E4C11496D /* libPods-EcommerseStore.a */; };
 		88D8957F2AAD4908AB3BC165 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 877E14DDBCBB4D01ADF41262 /* Roboto-ThinItalic.ttf */; };
 		9262C13A8C924778871823C6 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1A20913507F418B8F10B47E /* Roboto-Light.ttf */; };
 		946116F3BB20478F8F9AB59B /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E0A11B144F214A11B8D2D02D /* Roboto-Black.ttf */; };
-		9918CDE5616E99E5E9E858C3 /* libPods-AwesomeProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 339A57FCDC31AACF38792F6A /* libPods-AwesomeProjectTests.a */; };
-		A49F525772A91D54D8375CB2 /* libPods-AwesomeProject-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1A41D8BE1523B6A6D8063A /* libPods-AwesomeProject-tvOS.a */; };
+		9918CDE5616E99E5E9E858C3 /* libPods-EcommerseStoreTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 339A57FCDC31AACF38792F6A /* libPods-EcommerseStoreTests.a */; };
+		A49F525772A91D54D8375CB2 /* libPods-EcommerseStore-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1A41D8BE1523B6A6D8063A /* libPods-EcommerseStore-tvOS.a */; };
 		BC12543C4FCC4AD280F7606A /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 447372ECEB6C4A2AB76CA5D2 /* Roboto-Regular.ttf */; };
-		CF90733361A7A02EC6F8D935 /* libPods-AwesomeProject-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BBE9C3D4F4E6CF86D1B285 /* libPods-AwesomeProject-tvOSTests.a */; };
+		CF90733361A7A02EC6F8D935 /* libPods-EcommerseStore-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BBE9C3D4F4E6CF86D1B285 /* libPods-EcommerseStore-tvOSTests.a */; };
 		D8A6791D72C14991BD621527 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E9FFB1F3E4A415C8D858C0B /* Roboto-Bold.ttf */; };
 		F0EFB80FCF8D42A094C0F72D /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C35F71F23FA4C3D9BCD2AB3 /* Roboto-BoldItalic.ttf */; };
 		F46DE5F62443B8C5002BA72F /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46DE5F52443B8C5002BA72F /* File.swift */; };
@@ -41,59 +41,59 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = AwesomeProject;
+			remoteInfo = EcommerseStore;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "AwesomeProject-tvOS";
+			remoteInfo = "EcommerseStore-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* AwesomeProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwesomeProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* EcommerseStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EcommerseStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* AwesomeProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwesomeProjectTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* AwesomeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwesomeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = AwesomeProject/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = AwesomeProject/AppDelegate.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* EcommerseStoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EcommerseStoreTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* EcommerseStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcommerseStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = EcommerseStore/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = EcommerseStore/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = AwesomeProject/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = AwesomeProject/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = AwesomeProject/main.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = EcommerseStore/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = EcommerseStore/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = EcommerseStore/main.m; sourceTree = "<group>"; };
 		1E9FFB1F3E4A415C8D858C0B /* Roboto-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Bold.ttf"; path = "../src/shared/assets/fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		232A7DF06496481FB9CDC84C /* Roboto-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Medium.ttf"; path = "../src/shared/assets/fonts/Roboto-Medium.ttf"; sourceTree = "<group>"; };
-		25DF75C2DE862C2E4C11496D /* libPods-AwesomeProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AwesomeProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		25DF75C2DE862C2E4C11496D /* libPods-EcommerseStore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EcommerseStore.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A40C76FCDBA4BE2A45DA58C /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-BlackItalic.ttf"; path = "../src/shared/assets/fonts/Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* AwesomeProject-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AwesomeProject-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* AwesomeProject-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AwesomeProject-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F1A41D8BE1523B6A6D8063A /* libPods-AwesomeProject-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AwesomeProject-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		339A57FCDC31AACF38792F6A /* libPods-AwesomeProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AwesomeProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		411F185B9F6148F941FC7F96 /* Pods-AwesomeProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-AwesomeProjectTests/Pods-AwesomeProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2D02E47B1E0B4A5D006451C7 /* EcommerseStore-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EcommerseStore-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* EcommerseStore-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EcommerseStore-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F1A41D8BE1523B6A6D8063A /* libPods-EcommerseStore-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EcommerseStore-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		339A57FCDC31AACF38792F6A /* libPods-EcommerseStoreTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EcommerseStoreTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		411F185B9F6148F941FC7F96 /* Pods-EcommerseStoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcommerseStoreTests.debug.xcconfig"; path = "Target Support Files/Pods-EcommerseStoreTests/Pods-EcommerseStoreTests.debug.xcconfig"; sourceTree = "<group>"; };
 		447372ECEB6C4A2AB76CA5D2 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Regular.ttf"; path = "../src/shared/assets/fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		488311D0905A4EDBA2B11B37 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Thin.ttf"; path = "../src/shared/assets/fonts/Roboto-Thin.ttf"; sourceTree = "<group>"; };
-		4DEA663CF53B436C1861C009 /* Pods-AwesomeProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeProjectTests.release.xcconfig"; path = "Target Support Files/Pods-AwesomeProjectTests/Pods-AwesomeProjectTests.release.xcconfig"; sourceTree = "<group>"; };
-		6FD659BEF0F4CD2D621D46C5 /* Pods-AwesomeProject-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeProject-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-AwesomeProject-tvOS/Pods-AwesomeProject-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		792F72DF576F0AADBF7797FA /* Pods-AwesomeProject-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeProject-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-AwesomeProject-tvOSTests/Pods-AwesomeProject-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4DEA663CF53B436C1861C009 /* Pods-EcommerseStoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcommerseStoreTests.release.xcconfig"; path = "Target Support Files/Pods-EcommerseStoreTests/Pods-EcommerseStoreTests.release.xcconfig"; sourceTree = "<group>"; };
+		6FD659BEF0F4CD2D621D46C5 /* Pods-EcommerseStore-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcommerseStore-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-EcommerseStore-tvOS/Pods-EcommerseStore-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		792F72DF576F0AADBF7797FA /* Pods-EcommerseStore-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcommerseStore-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-EcommerseStore-tvOSTests/Pods-EcommerseStore-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		877E14DDBCBB4D01ADF41262 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-ThinItalic.ttf"; path = "../src/shared/assets/fonts/Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
 		8C6A3420A9CE419D8967A99C /* Roboto-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Italic.ttf"; path = "../src/shared/assets/fonts/Roboto-Italic.ttf"; sourceTree = "<group>"; };
 		8FF7F2BCE3DC45A9A1AE80CE /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-MediumItalic.ttf"; path = "../src/shared/assets/fonts/Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
 		94669F7FD0FA441AB9C36604 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-LightItalic.ttf"; path = "../src/shared/assets/fonts/Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
 		9C35F71F23FA4C3D9BCD2AB3 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-BoldItalic.ttf"; path = "../src/shared/assets/fonts/Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
 		A1A20913507F418B8F10B47E /* Roboto-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Light.ttf"; path = "../src/shared/assets/fonts/Roboto-Light.ttf"; sourceTree = "<group>"; };
-		A4480C2361F449E9F9B693A8 /* Pods-AwesomeProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeProject.release.xcconfig"; path = "Target Support Files/Pods-AwesomeProject/Pods-AwesomeProject.release.xcconfig"; sourceTree = "<group>"; };
-		B0126CCE916D556B61C643C8 /* Pods-AwesomeProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeProject.debug.xcconfig"; path = "Target Support Files/Pods-AwesomeProject/Pods-AwesomeProject.debug.xcconfig"; sourceTree = "<group>"; };
-		DCE7A63D2283600561D126E1 /* Pods-AwesomeProject-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeProject-tvOS.release.xcconfig"; path = "Target Support Files/Pods-AwesomeProject-tvOS/Pods-AwesomeProject-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		A4480C2361F449E9F9B693A8 /* Pods-EcommerseStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcommerseStore.release.xcconfig"; path = "Target Support Files/Pods-EcommerseStore/Pods-EcommerseStore.release.xcconfig"; sourceTree = "<group>"; };
+		B0126CCE916D556B61C643C8 /* Pods-EcommerseStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcommerseStore.debug.xcconfig"; path = "Target Support Files/Pods-EcommerseStore/Pods-EcommerseStore.debug.xcconfig"; sourceTree = "<group>"; };
+		DCE7A63D2283600561D126E1 /* Pods-EcommerseStore-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcommerseStore-tvOS.release.xcconfig"; path = "Target Support Files/Pods-EcommerseStore-tvOS/Pods-EcommerseStore-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		E0A11B144F214A11B8D2D02D /* Roboto-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Black.ttf"; path = "../src/shared/assets/fonts/Roboto-Black.ttf"; sourceTree = "<group>"; };
-		E0BBE9C3D4F4E6CF86D1B285 /* libPods-AwesomeProject-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AwesomeProject-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0BBE9C3D4F4E6CF86D1B285 /* libPods-EcommerseStore-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EcommerseStore-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		F46DE5F42443B8C5002BA72F /* AwesomeProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AwesomeProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		F46DE5F42443B8C5002BA72F /* EcommerseStore-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EcommerseStore-Bridging-Header.h"; sourceTree = "<group>"; };
 		F46DE5F52443B8C5002BA72F /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		F7B2FE68CF40B0577F889E55 /* Pods-AwesomeProject-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeProject-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-AwesomeProject-tvOSTests/Pods-AwesomeProject-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		F7B2FE68CF40B0577F889E55 /* Pods-EcommerseStore-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcommerseStore-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-EcommerseStore-tvOSTests/Pods-EcommerseStore-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9918CDE5616E99E5E9E858C3 /* libPods-AwesomeProjectTests.a in Frameworks */,
+				9918CDE5616E99E5E9E858C3 /* libPods-EcommerseStoreTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				861A092A169AF7E23FB7530B /* libPods-AwesomeProject.a in Frameworks */,
+				861A092A169AF7E23FB7530B /* libPods-EcommerseStore.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A49F525772A91D54D8375CB2 /* libPods-AwesomeProject-tvOS.a in Frameworks */,
+				A49F525772A91D54D8375CB2 /* libPods-EcommerseStore-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,20 +125,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF90733361A7A02EC6F8D935 /* libPods-AwesomeProject-tvOSTests.a in Frameworks */,
+				CF90733361A7A02EC6F8D935 /* libPods-EcommerseStore-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* AwesomeProjectTests */ = {
+		00E356EF1AD99517003FC87E /* EcommerseStoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* AwesomeProjectTests.m */,
+				00E356F21AD99517003FC87E /* EcommerseStoreTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = AwesomeProjectTests;
+			path = EcommerseStoreTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -149,7 +149,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* AwesomeProject */ = {
+		13B07FAE1A68108700A75B9A /* EcommerseStore */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -160,7 +160,7 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = AwesomeProject;
+			name = EcommerseStore;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -168,10 +168,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				25DF75C2DE862C2E4C11496D /* libPods-AwesomeProject.a */,
-				2F1A41D8BE1523B6A6D8063A /* libPods-AwesomeProject-tvOS.a */,
-				E0BBE9C3D4F4E6CF86D1B285 /* libPods-AwesomeProject-tvOSTests.a */,
-				339A57FCDC31AACF38792F6A /* libPods-AwesomeProjectTests.a */,
+				25DF75C2DE862C2E4C11496D /* libPods-EcommerseStore.a */,
+				2F1A41D8BE1523B6A6D8063A /* libPods-EcommerseStore-tvOS.a */,
+				E0BBE9C3D4F4E6CF86D1B285 /* libPods-EcommerseStore-tvOSTests.a */,
+				339A57FCDC31AACF38792F6A /* libPods-EcommerseStoreTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -206,14 +206,14 @@
 			isa = PBXGroup;
 			children = (
 				F46DE5F52443B8C5002BA72F /* File.swift */,
-				13B07FAE1A68108700A75B9A /* AwesomeProject */,
+				13B07FAE1A68108700A75B9A /* EcommerseStore */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* AwesomeProjectTests */,
+				00E356EF1AD99517003FC87E /* EcommerseStoreTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				B35E2D78162660338BCBE082 /* Pods */,
 				716686BF444640E7A6A608AA /* Resources */,
-				F46DE5F42443B8C5002BA72F /* AwesomeProject-Bridging-Header.h */,
+				F46DE5F42443B8C5002BA72F /* EcommerseStore-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -223,10 +223,10 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* AwesomeProject.app */,
-				00E356EE1AD99517003FC87E /* AwesomeProjectTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* AwesomeProject-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* AwesomeProject-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* EcommerseStore.app */,
+				00E356EE1AD99517003FC87E /* EcommerseStoreTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* EcommerseStore-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* EcommerseStore-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -234,14 +234,14 @@
 		B35E2D78162660338BCBE082 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B0126CCE916D556B61C643C8 /* Pods-AwesomeProject.debug.xcconfig */,
-				A4480C2361F449E9F9B693A8 /* Pods-AwesomeProject.release.xcconfig */,
-				6FD659BEF0F4CD2D621D46C5 /* Pods-AwesomeProject-tvOS.debug.xcconfig */,
-				DCE7A63D2283600561D126E1 /* Pods-AwesomeProject-tvOS.release.xcconfig */,
-				792F72DF576F0AADBF7797FA /* Pods-AwesomeProject-tvOSTests.debug.xcconfig */,
-				F7B2FE68CF40B0577F889E55 /* Pods-AwesomeProject-tvOSTests.release.xcconfig */,
-				411F185B9F6148F941FC7F96 /* Pods-AwesomeProjectTests.debug.xcconfig */,
-				4DEA663CF53B436C1861C009 /* Pods-AwesomeProjectTests.release.xcconfig */,
+				B0126CCE916D556B61C643C8 /* Pods-EcommerseStore.debug.xcconfig */,
+				A4480C2361F449E9F9B693A8 /* Pods-EcommerseStore.release.xcconfig */,
+				6FD659BEF0F4CD2D621D46C5 /* Pods-EcommerseStore-tvOS.debug.xcconfig */,
+				DCE7A63D2283600561D126E1 /* Pods-EcommerseStore-tvOS.release.xcconfig */,
+				792F72DF576F0AADBF7797FA /* Pods-EcommerseStore-tvOSTests.debug.xcconfig */,
+				F7B2FE68CF40B0577F889E55 /* Pods-EcommerseStore-tvOSTests.release.xcconfig */,
+				411F185B9F6148F941FC7F96 /* Pods-EcommerseStoreTests.debug.xcconfig */,
+				4DEA663CF53B436C1861C009 /* Pods-EcommerseStoreTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -249,9 +249,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* AwesomeProjectTests */ = {
+		00E356ED1AD99517003FC87E /* EcommerseStoreTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AwesomeProjectTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "EcommerseStoreTests" */;
 			buildPhases = (
 				3B363F3B952880AA81F4AC29 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -263,14 +263,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = AwesomeProjectTests;
-			productName = AwesomeProjectTests;
-			productReference = 00E356EE1AD99517003FC87E /* AwesomeProjectTests.xctest */;
+			name = EcommerseStoreTests;
+			productName = EcommerseStoreTests;
+			productReference = 00E356EE1AD99517003FC87E /* EcommerseStoreTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* AwesomeProject */ = {
+		13B07F861A680F5B00A75B9A /* EcommerseStore */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "AwesomeProject" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "EcommerseStore" */;
 			buildPhases = (
 				E8B3B48EE84F3A5BE7319C0D /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -283,14 +283,14 @@
 			);
 			dependencies = (
 			);
-			name = AwesomeProject;
-			productName = AwesomeProject;
-			productReference = 13B07F961A680F5B00A75B9A /* AwesomeProject.app */;
+			name = EcommerseStore;
+			productName = EcommerseStore;
+			productReference = 13B07F961A680F5B00A75B9A /* EcommerseStore.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* AwesomeProject-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* EcommerseStore-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "AwesomeProject-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "EcommerseStore-tvOS" */;
 			buildPhases = (
 				4145B022913169D87BC497B1 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
@@ -303,14 +303,14 @@
 			);
 			dependencies = (
 			);
-			name = "AwesomeProject-tvOS";
-			productName = "AwesomeProject-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* AwesomeProject-tvOS.app */;
+			name = "EcommerseStore-tvOS";
+			productName = "EcommerseStore-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* EcommerseStore-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* AwesomeProject-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* EcommerseStore-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "AwesomeProject-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "EcommerseStore-tvOSTests" */;
 			buildPhases = (
 				8331F0C7ED72F0587CF5960E /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
@@ -322,9 +322,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "AwesomeProject-tvOSTests";
-			productName = "AwesomeProject-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* AwesomeProject-tvOSTests.xctest */;
+			name = "EcommerseStore-tvOSTests";
+			productName = "EcommerseStore-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* EcommerseStore-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -354,7 +354,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "AwesomeProject" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "EcommerseStore" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -368,10 +368,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* AwesomeProject */,
-				00E356ED1AD99517003FC87E /* AwesomeProjectTests */,
-				2D02E47A1E0B4A5D006451C7 /* AwesomeProject-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* AwesomeProject-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* EcommerseStore */,
+				00E356ED1AD99517003FC87E /* EcommerseStoreTests */,
+				2D02E47A1E0B4A5D006451C7 /* EcommerseStore-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* EcommerseStore-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -466,7 +466,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AwesomeProjectTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-EcommerseStoreTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -488,7 +488,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AwesomeProject-tvOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-EcommerseStore-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -510,7 +510,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AwesomeProject-tvOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-EcommerseStore-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -532,7 +532,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AwesomeProject-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-EcommerseStore-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -584,7 +584,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* AwesomeProjectTests.m in Sources */,
+				00E356F31AD99517003FC87E /* EcommerseStoreTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,7 +611,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* AwesomeProjectTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* EcommerseStoreTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,12 +620,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* AwesomeProject */;
+			target = 13B07F861A680F5B00A75B9A /* EcommerseStore */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* AwesomeProject-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* EcommerseStore-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -637,7 +637,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = AwesomeProject;
+			path = EcommerseStore;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -645,7 +645,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 411F185B9F6148F941FC7F96 /* Pods-AwesomeProjectTests.debug.xcconfig */;
+			baseConfigurationReference = 411F185B9F6148F941FC7F96 /* Pods-EcommerseStoreTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -653,7 +653,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = AwesomeProjectTests/Info.plist;
+				INFOPLIST_FILE = EcommerseStoreTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -663,18 +663,18 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AwesomeProject.app/AwesomeProject";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EcommerseStore.app/EcommerseStore";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DEA663CF53B436C1861C009 /* Pods-AwesomeProjectTests.release.xcconfig */;
+			baseConfigurationReference = 4DEA663CF53B436C1861C009 /* Pods-EcommerseStoreTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = AwesomeProjectTests/Info.plist;
+				INFOPLIST_FILE = EcommerseStoreTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -684,19 +684,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AwesomeProject.app/AwesomeProject";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EcommerseStore.app/EcommerseStore";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B0126CCE916D556B61C643C8 /* Pods-AwesomeProject.debug.xcconfig */;
+			baseConfigurationReference = B0126CCE916D556B61C643C8 /* Pods-EcommerseStore.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				INFOPLIST_FILE = AwesomeProject/Info.plist;
+				INFOPLIST_FILE = EcommerseStore/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -739,8 +739,8 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = AwesomeProject;
-				SWIFT_OBJC_BRIDGING_HEADER = "AwesomeProject-Bridging-Header.h";
+				PRODUCT_NAME = EcommerseStore;
+				SWIFT_OBJC_BRIDGING_HEADER = "EcommerseStore-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -749,12 +749,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A4480C2361F449E9F9B693A8 /* Pods-AwesomeProject.release.xcconfig */;
+			baseConfigurationReference = A4480C2361F449E9F9B693A8 /* Pods-EcommerseStore.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = AwesomeProject/Info.plist;
+				INFOPLIST_FILE = EcommerseStore/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -797,8 +797,8 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = AwesomeProject;
-				SWIFT_OBJC_BRIDGING_HEADER = "AwesomeProject-Bridging-Header.h";
+				PRODUCT_NAME = EcommerseStore;
+				SWIFT_OBJC_BRIDGING_HEADER = "EcommerseStore-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -806,7 +806,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6FD659BEF0F4CD2D621D46C5 /* Pods-AwesomeProject-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 6FD659BEF0F4CD2D621D46C5 /* Pods-EcommerseStore-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -817,14 +817,14 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "AwesomeProject-tvOS/Info.plist";
+				INFOPLIST_FILE = "EcommerseStore-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.AwesomeProject-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.EcommerseStore-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -834,7 +834,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DCE7A63D2283600561D126E1 /* Pods-AwesomeProject-tvOS.release.xcconfig */;
+			baseConfigurationReference = DCE7A63D2283600561D126E1 /* Pods-EcommerseStore-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -845,14 +845,14 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "AwesomeProject-tvOS/Info.plist";
+				INFOPLIST_FILE = "EcommerseStore-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.AwesomeProject-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.EcommerseStore-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -862,7 +862,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 792F72DF576F0AADBF7797FA /* Pods-AwesomeProject-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 792F72DF576F0AADBF7797FA /* Pods-EcommerseStore-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -872,24 +872,24 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "AwesomeProject-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "EcommerseStore-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.AwesomeProject-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.EcommerseStore-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AwesomeProject-tvOS.app/AwesomeProject-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EcommerseStore-tvOS.app/EcommerseStore-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7B2FE68CF40B0577F889E55 /* Pods-AwesomeProject-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = F7B2FE68CF40B0577F889E55 /* Pods-EcommerseStore-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -899,17 +899,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "AwesomeProject-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "EcommerseStore-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.AwesomeProject-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.EcommerseStore-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AwesomeProject-tvOS.app/AwesomeProject-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EcommerseStore-tvOS.app/EcommerseStore-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -1016,7 +1016,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AwesomeProjectTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "EcommerseStoreTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -1025,7 +1025,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "AwesomeProject" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "EcommerseStore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -1034,7 +1034,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "AwesomeProject-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "EcommerseStore-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -1043,7 +1043,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "AwesomeProject-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "EcommerseStore-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -1052,7 +1052,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "AwesomeProject" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "EcommerseStore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
