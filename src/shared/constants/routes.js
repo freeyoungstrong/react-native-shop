@@ -3,4 +3,5 @@ export const routes = {
     REGISTRATION: 'Registration',
     MAIN: 'Main',
     PRODUCT_DETAILS: 'ProductDetails',
+    WELCOME: 'Welcome',
 };

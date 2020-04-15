@@ -23,6 +23,10 @@
             }
         }
     },
+    "welcome": {
+        "login": "Go to login page",
+        "registration": "Go to registration page"
+    },
     "registration": {
         "title": "Ecommerce Store",
         "fullName": "Full name",
