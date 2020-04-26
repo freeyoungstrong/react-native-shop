@@ -1,64 +1,45 @@
 import React, { useState, useCallback } from 'react';
-import { Text, Alert, Vibration } from 'react-native';
+import { Text, Alert } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import LinearGradient from 'react-native-linear-gradient';
 import NetInfo from '@react-native-community/netinfo';
+import { useDispatch } from 'react-redux';
 
 import { styles } from './styles';
 import { Input, Button, NavQuestion, ModalView } from 'shared/components';
 import { loc } from 'shared/assets';
-import { routes, USER } from 'shared/constants';
-import { AuthContext } from 'shared/context';
+import { routes } from 'shared/constants';
 import { colors } from 'shared/assets';
-import { storeData } from 'shared/utils';
-
-const ONE_SECOND_IN_MS = 1000;
+import { login } from 'shared/redux/actions';
 
 export const LoginScreen = ({ navigation }) => {
-    const { signIn } = React.useContext(AuthContext);
     const [loginName, onChangeLoginName] = useState('');
     const [password, onChangePassword] = useState('');
     const [modalVisible, setModalVisible] = useState(false);
     const [modalAskInternetVisible, setModalAskInternetVisible] = useState(false);
+    const dispatch = useDispatch();
 
     const onPressSignIn = useCallback(async () => {
-        const formData = new FormData();
-        formData.append('loginname', loginName);
-        formData.append('password', password);
         NetInfo.fetch().then(state => {
             if (!state.isConnected) {
                 setModalAskInternetVisible(true);
             }
         });
-        try {
-            const response = await fetch('http://34.73.95.65/index.php?rt=a/account/login', {
-                method: 'POST',
-                headers: {
-                    Accept: 'application/json',
-                },
-                body: formData,
-            });
-            const result = await response.json();
-            if (result.status === 1) {
-                await storeData(USER, `${result.userToken}`);
-                navigation.navigate(routes.MAIN);
-            } else {
-                setModalVisible(true);
-                Vibration.vibrate(ONE_SECOND_IN_MS);
-            }
-        } catch (error) {
-            console.log(error);
-        }
-    }, []);
+        dispatch(login({ loginName, password }));
+    }, [dispatch]);
+
     const onPressNavQuestionForgotPassword = useCallback(() => {
         Alert.alert(loc('login.navQuestion1.move'));
     }, []);
+
     const onPressNavQuestionSignUp = useCallback(() => {
         navigation.navigate(routes.REGISTRATION);
     }, []);
+
     const opacityStyle = {
         opacity: 0.5,
     };
+
     return (
         // <KeyboardAwareScrollView
         // style={styles.scrollView}
@@ -93,7 +74,6 @@ export const LoginScreen = ({ navigation }) => {
             <Button
                 title={loc('login.button.title').toUpperCase()}
                 onPress={onPressSignIn}
-                // onPress={signIn} //this is temporary logic
                 buttonStyle={styles.buttonStyle}
                 buttonStyleTitle={styles.buttonTitle}
             />
