@@ -11,6 +11,7 @@ export const Input = ({ onChangeText, text, placeholder, secure } = {}) => {
             value={text}
             placeholder={placeholder}
             secureTextEntry={secure}
+            autoCapitalize="none"
         />
     );
 };

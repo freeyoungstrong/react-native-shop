@@ -25,4 +25,8 @@ export const styles = StyleSheet.create({
         position: 'absolute',
         bottom: '20%',
     },
+    progressCircle: {
+        position: 'absolute',
+        opacity: 0.3,
+    },
 });
