@@ -8,11 +8,9 @@ import { styles } from './styles';
 import { Input, Button, NavQuestion, ModalView } from 'shared/components';
 import { loc } from 'shared/assets';
 import { routes } from 'shared/constants';
-import { AuthContext } from 'shared/context';
 import { colors } from 'shared/assets';
 
 export const RegistrationScreen = ({ navigation }) => {
-    const { signUp } = React.useContext(AuthContext);
     const [fullName, onChangeFullName] = useState('');
     const [email, onChangeEmail] = useState('');
     const [password, onChangePassword] = useState('');
@@ -23,7 +21,7 @@ export const RegistrationScreen = ({ navigation }) => {
             if (!state.isConnected) {
                 setModalAskInternetVisible(true);
             } else {
-                navigation.navigate(routes.MAIN);
+                navigation.navigate(routes.HOME, { screen: routes.MAIN });
             }
         });
     }, []);

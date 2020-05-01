@@ -8,9 +8,10 @@ import { useDispatch } from 'react-redux';
 import { styles } from './styles';
 import { Input, Button, NavQuestion, ModalView } from 'shared/components';
 import { loc } from 'shared/assets';
-import { routes } from 'shared/constants';
+import { routes, USER } from 'shared/constants';
 import { colors } from 'shared/assets';
 import { login } from 'shared/redux/actions';
+import { getData } from 'shared/utils';
 
 export const LoginScreen = ({ navigation }) => {
     const [loginName, onChangeLoginName] = useState('');
@@ -25,8 +26,13 @@ export const LoginScreen = ({ navigation }) => {
                 setModalAskInternetVisible(true);
             }
         });
-        dispatch(login({ loginName, password }));
-    }, [dispatch]);
+
+        await dispatch(login({ loginName, password }));
+
+        if (await getData(USER)) {
+            navigation.navigate(routes.HOME, { screen: routes.MAIN });
+        }
+    }, [dispatch, loginName, password]);
 
     const onPressNavQuestionForgotPassword = useCallback(() => {
         Alert.alert(loc('login.navQuestion1.move'));
@@ -64,8 +70,8 @@ export const LoginScreen = ({ navigation }) => {
                 description={loc('ask-internet.description')}
             />
             <Text style={styles.title}>{loc('login.title')}</Text>
-            <Input onChangeText={onChangeLoginName} value={loginName} placeholder={loc('login.loginName')} />
-            <Input secure={true} onChangeText={onChangePassword} value={password} placeholder={loc('login.password')} />
+            <Input onChangeText={onChangeLoginName} text={loginName} placeholder={loc('login.loginName')} />
+            <Input secure={true} onChangeText={onChangePassword} text={password} placeholder={loc('login.password')} />
             <NavQuestion
                 title={loc('login.navQuestion1.title')}
                 onPress={onPressNavQuestionForgotPassword}

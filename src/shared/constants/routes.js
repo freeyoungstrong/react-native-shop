@@ -4,4 +4,5 @@ export const routes = {
     MAIN: 'Main',
     PRODUCT_DETAILS: 'ProductDetails',
     WELCOME: 'Welcome',
+    HOME: 'Home',
 };
