@@ -22,8 +22,8 @@ export const login = ({ loginName, password }) => async dispatch => {
         const response = await fetch('http://34.73.95.65/index.php?rt=a/account/login', requestOptions);
         const result = await response.json();
         if (result.status === 1) {
-            await storeData(USER, `${result.userToken}`);
-            dispatch(loginSuccess(result));
+            await storeData(USER, `${result.token}`);
+            dispatch(loginSuccess({ status: result.status, userToken: result.token }));
         } else {
             Vibration.vibrate(ONE_SECOND_IN_MS);
             dispatch(loginFailure({ status: result.status, error: result.error }));

@@ -11,7 +11,7 @@ import { getData } from 'shared/utils';
 export const WelcomeScreen = ({ navigation }) => {
     const onAnimationComplete = useCallback(async () => {
         if (await getData(USER)) {
-            navigation.navigate(routes.MAIN);
+            navigation.navigate(routes.HOME, { screen: routes.MAIN });
         } else {
             navigation.navigate(routes.LOGIN);
         }
