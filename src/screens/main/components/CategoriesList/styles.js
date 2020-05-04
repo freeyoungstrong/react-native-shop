@@ -2,9 +2,8 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
     container: {
+        margin: 15,
         flexDirection: 'row',
-        flexWrap: 'wrap',
-        justifyContent: 'center',
     },
     categoryContainer: {
         width: 80,

@@ -1,41 +1,34 @@
-import React, { Component } from 'react';
-import { View, TouchableOpacity } from 'react-native';
+import React, { useCallback } from 'react';
+import { View, TouchableOpacity, Text } from 'react-native';
+import { useSelector } from 'react-redux';
 
-import { Product } from 'shared/components';
+import { ProductCard } from '../ProductCard/ProductCard';
 import { routes } from 'shared/constants';
 import { styles } from './styles';
 
-const product1 = {
-    title: 'Xiaomi Mi A3',
-    cost: '222',
-};
-const product2 = {
-    title: 'OPPO K3',
-    cost: '150',
-};
-const product3 = {
-    title: 'iPhone XR',
-    cost: '840',
-};
-export class ProductsList extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            productsList: [product1, product2, product3],
-        };
-    }
-    render() {
-        const productsList = this.state.productsList
-            ? this.state.productsList.map(prod => (
-                  <TouchableOpacity onPress={() => this.props.navigation.navigate(routes.PRODUCT_DETAILS)}>
-                      <Product title={prod.title} cost={prod.cost} key={prod.cost} />
-                  </TouchableOpacity>
-              ))
-            : null;
-        return (
-            <View>
-                <View style={styles.productsList}>{productsList}</View>
+export const ProductsList = ({ navigation }) => {
+    const onPressProduct = useCallback(
+        prod => {
+            navigation.navigate(routes.PRODUCT_DETAILS, { product: prod });
+        },
+        [navigation],
+    );
+    const productsList = useSelector(state => state.products.products).map(prod => (
+        <TouchableOpacity onPress={() => onPressProduct(prod)} key={prod.id}>
+            <ProductCard
+                title={prod.cell.name}
+                price={prod.cell.price}
+                key={prod.id}
+                source={`http:${prod.cell.thumb}`}
+            />
+        </TouchableOpacity>
+    ));
+
+    return (
+        <View>
+            <View style={styles.productsList}>
+                {productsList ? productsList : <Text>Here should be list of products</Text>}
             </View>
-        );
-    }
-}
+        </View>
+    );
+};

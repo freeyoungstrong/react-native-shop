@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 
 import { fetchCategories } from 'shared/redux/actions';
 import { ProductsList, CategoriesList } from './components';
+import { Divider } from 'shared/components';
 
 export const Main = ({ navigation }) => {
     // const dispatch = useDispatch();
@@ -12,6 +13,7 @@ export const Main = ({ navigation }) => {
     return (
         <ScrollView>
             <CategoriesList />
+            <Divider />
             <ProductsList navigation={navigation} />
         </ScrollView>
     );

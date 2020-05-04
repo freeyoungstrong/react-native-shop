@@ -5,16 +5,13 @@ import { colors } from 'shared/assets';
 export const styles = StyleSheet.create({
     wrap: {
         flex: 1,
-        backgroundColor: colors.gray,
     },
     container: {
-        marginVertical: 5,
         backgroundColor: colors.white,
     },
     image: {
         width: '60%',
         height: 300,
-        borderWidth: 1,
         marginHorizontal: '20%',
         marginVertical: '5%',
     },
@@ -71,7 +68,6 @@ export const styles = StyleSheet.create({
         color: colors.black,
         fontFamily: 'Roboto-Regular',
     },
-
     buttonAddToCartStyle: {
         width: '50%',
         height: 40,
