@@ -1,9 +1,10 @@
 import { FETCH_CATEGORIES_FAILURE, FETCH_CATEGORIES_REQUEST, FETCH_CATEGORIES_SUCCESS } from './actionTypes';
+import { API_URL } from 'shared/constants';
 
 export const fetchCategories = () => async dispatch => {
     dispatch(fetchCategoriesRequest());
     try {
-        const response = await fetch('http://34.73.95.65/index.php?rt=a/product/category&category_id=0');
+        const response = await fetch(`${API_URL}?rt=a/product/category&category_id=0`);
         const result = await response.json();
         const categories = result.subcategories;
         dispatch(fetchCategoriesSuccess(categories));

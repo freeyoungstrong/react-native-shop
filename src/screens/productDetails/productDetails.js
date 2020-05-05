@@ -8,6 +8,9 @@ import { loc } from 'shared/assets';
 
 export const ProductDetails = ({ route }) => {
     const { product } = route.params;
+    const {
+        cell: { name, price, thumb, description },
+    } = product;
     const onPressButtonWishList = () => {
         Alert.alert(loc('productDetails.buttonWishlist.message'));
     };
@@ -18,9 +21,9 @@ export const ProductDetails = ({ route }) => {
     return (
         <ScrollView style={styles.wrap}>
             <View style={styles.container}>
-                <Image source={{ uri: `http:${product.cell.thumb}` }} style={styles.image} />
-                <Text style={styles.nameOfDevice}>{product.cell.name}</Text>
-                <Text style={styles.costOfDevice}>{product.cell.price}</Text>
+                <Image source={{ uri: `http:${thumb}` }} style={styles.image} />
+                <Text style={styles.nameOfDevice}>{name}</Text>
+                <Text style={styles.costOfDevice}>{price}</Text>
             </View>
             <Divider />
             <View style={styles.container}>
@@ -34,7 +37,7 @@ export const ProductDetails = ({ route }) => {
             <Divider />
             <View style={styles.container}>
                 <Text style={styles.title}>{loc('productDetails.description')}</Text>
-                <Text style={styles.description}>{he.decode(product.cell.description)}</Text>
+                <Text style={styles.description}>{he.decode(description)}</Text>
             </View>
             <View style={styles.buttons}>
                 <Button

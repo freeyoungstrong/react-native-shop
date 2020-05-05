@@ -6,17 +6,20 @@ import he from 'he';
 import { styles } from './styles';
 
 export const CategoriesList = () => {
-    const categories = useSelector(state => state.categories.categories).map(category => (
-        <TouchableOpacity style={styles.categoryContainer} key={category.category_id}>
-            <Image
-                style={styles.image}
-                source={{
-                    uri: `http:${category.thumb}`,
-                }}
-            />
-            <Text>{he.decode(category.name)}</Text>
-        </TouchableOpacity>
-    ));
+    const categories = useSelector(state => state.categories.categories).map(category => {
+        const { category_id, thumb, name } = category;
+        return (
+            <TouchableOpacity style={styles.categoryContainer} key={category_id}>
+                <Image
+                    style={styles.image}
+                    source={{
+                        uri: `http:${thumb}`,
+                    }}
+                />
+                <Text>{he.decode(name)}</Text>
+            </TouchableOpacity>
+        );
+    });
 
     return (
         <ScrollView horizontal={true} style={styles.container}>
