@@ -1,10 +1,13 @@
 import React from 'react';
+import { Alert, TouchableOpacity } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 
 import { LoginScreen, RegistrationScreen, Main, ProductDetails, WelcomeScreen } from 'screens';
 import { routes } from 'shared/constants';
 import { colors } from 'shared/assets';
+import { styles } from './styles';
 
 const RootStack = createStackNavigator();
 const DrawerStack = createDrawerNavigator();
@@ -20,6 +23,14 @@ const DrawerNavigator = () => {
     );
 };
 
+const HeaderRight = () => {
+    return (
+        <TouchableOpacity style={styles.cart} onPress={() => Alert.alert('Move to cart screen')}>
+            <FontAwesomeIcon size={30} name="shopping-cart" />
+        </TouchableOpacity>
+    );
+};
+
 const HomeStackNavigator = () => {
     return (
         <HomeStack.Navigator>
@@ -30,6 +41,7 @@ const HomeStackNavigator = () => {
                     headerStyle: { backgroundColor: colors.lightBlue, height: 100 },
                     headerTintColor: colors.white,
                     title: 'Ecommerse Store',
+                    headerRight: HeaderRight,
                 }}
             />
             <HomeStack.Screen
@@ -38,6 +50,7 @@ const HomeStackNavigator = () => {
                 options={{
                     headerStyle: { backgroundColor: colors.lightBlue },
                     title: null,
+                    headerBackTitle: 'Back',
                 }}
             />
         </HomeStack.Navigator>
