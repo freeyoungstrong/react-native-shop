@@ -8,18 +8,19 @@ import { styles } from './styles';
 
 export const ProductsList = ({ navigation }) => {
     const onPressProduct = useCallback(
-        product => {
+        product => () => {
             navigation.navigate(routes.PRODUCT_DETAILS, { product });
         },
         [navigation],
     );
+
     const productsList = useSelector(state => state.products.products).map(prod => {
         const {
             id,
             cell: { name, price, thumb },
         } = prod;
         return (
-            <TouchableOpacity onPress={() => onPressProduct(prod)} key={id}>
+            <TouchableOpacity onPress={onPressProduct(prod)} key={id}>
                 <ProductCard title={name} price={price} key={prod.id} source={`http:${thumb}`} />
             </TouchableOpacity>
         );
