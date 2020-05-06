@@ -5,7 +5,7 @@ import { createDrawerNavigator, DrawerContentScrollView, DrawerItem, DrawerItemL
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import Share from 'react-native-share';
 
-import { LoginScreen, RegistrationScreen, Main, ProductDetails, WelcomeScreen } from 'screens';
+import { LoginScreen, RegistrationScreen, Main, ProductDetails, WelcomeScreen, MapScreen } from 'screens';
 import { routes } from 'shared/constants';
 import { colors } from 'shared/assets';
 import { styles } from './styles';
@@ -42,7 +42,7 @@ const DrawerNavigator = () => {
     return (
         <DrawerStack.Navigator drawerContent={props => <CustomDrawerContent {...props} />}>
             <DrawerStack.Screen name={routes.MAIN} component={HomeStackNavigator} />
-            <DrawerStack.Screen name="MockScreen1" component={ProductDetails} />
+            <DrawerStack.Screen name={routes.MAP} component={MapScreen} />
             <DrawerStack.Screen name="MockScreen2" component={ProductDetails} />
         </DrawerStack.Navigator>
     );
