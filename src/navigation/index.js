@@ -1,8 +1,9 @@
 import React from 'react';
 import { Alert, TouchableOpacity } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createDrawerNavigator, DrawerContentScrollView, DrawerItem, DrawerItemList } from '@react-navigation/drawer';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
+import Share from 'react-native-share';
 
 import { LoginScreen, RegistrationScreen, Main, ProductDetails, WelcomeScreen } from 'screens';
 import { routes } from 'shared/constants';
@@ -13,9 +14,33 @@ const RootStack = createStackNavigator();
 const DrawerStack = createDrawerNavigator();
 const HomeStack = createStackNavigator();
 
+const onPressShare = () => {
+    const options = {
+        title: 'Awesome Contents',
+        message: 'Please check this out',
+        url: 'https://awesome.contents.com/',
+    };
+    Share.open(options)
+        .then(res => {
+            console.log(res);
+        })
+        .catch(err => {
+            err && console.log(err);
+        });
+};
+
+const CustomDrawerContent = props => {
+    return (
+        <DrawerContentScrollView {...props}>
+            <DrawerItemList {...props} />
+            <DrawerItem label="Share" onPress={onPressShare} />
+        </DrawerContentScrollView>
+    );
+};
+
 const DrawerNavigator = () => {
     return (
-        <DrawerStack.Navigator>
+        <DrawerStack.Navigator drawerContent={props => <CustomDrawerContent {...props} />}>
             <DrawerStack.Screen name={routes.MAIN} component={HomeStackNavigator} />
             <DrawerStack.Screen name="MockScreen1" component={ProductDetails} />
             <DrawerStack.Screen name="MockScreen2" component={ProductDetails} />
