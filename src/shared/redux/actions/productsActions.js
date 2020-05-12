@@ -1,10 +1,10 @@
 import { FETCH_PRODUCTS_REQUEST, FETCH_PRODUCTS_SUCCESS, FETCH_PRODUCTS_FAILURE } from './actionTypes';
-import { API_URL } from 'shared/constants';
+import { fetchProducts } from '../../services';
 
 export const fetchProducts = () => async dispatch => {
     dispatch(fetchProductsRequest());
     try {
-        const response = await fetch(`${API_URL}?rt=a/product/filter&keyword=a&page=1&rows=10`);
+        const response = await fetchProducts();
         const result = await response.json();
         const products = result.rows;
         dispatch(fetchProductsSuccess(products));
