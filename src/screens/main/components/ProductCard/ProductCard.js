@@ -1,15 +1,15 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, Image } from 'react-native';
 
 import { styles } from './styles';
 
-export const Product = ({ title, cost }) => {
+export const ProductCard = ({ title, price, source }) => {
     return (
         <View style={styles.container}>
-            <View style={styles.image} />
+            <Image style={styles.image} source={{ uri: source }} />
             <View style={styles.info}>
                 <Text style={styles.title}>{title}</Text>
-                <Text style={styles.cost}>{`$ ${cost}`}</Text>
+                <Text style={styles.price}>{`$ ${price}`}</Text>
             </View>
         </View>
     );

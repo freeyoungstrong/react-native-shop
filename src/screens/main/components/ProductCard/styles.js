@@ -1,18 +1,24 @@
 import { StyleSheet } from 'react-native';
+import { colors } from 'shared/assets';
 
 export const styles = StyleSheet.create({
     container: {
         width: 180,
-        height: 180,
+        height: 210,
         margin: 10,
-        borderWidth: 1,
+        borderRadius: 5,
         justifyContent: 'flex-end',
+        alignItems: 'center',
+        shadowColor: colors.black,
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.2,
+        shadowRadius: 2,
+        elevation: 4,
+        backgroundColor: colors.white,
     },
     image: {
-        width: '90%',
-        height: '60%',
-        borderWidth: 1,
-        marginHorizontal: '5%',
+        width: 100,
+        height: 100,
     },
     info: {
         alignItems: 'flex-start',
@@ -23,7 +29,7 @@ export const styles = StyleSheet.create({
         textAlign: 'center',
         fontFamily: 'Roboto-Regular',
     },
-    cost: {
+    price: {
         fontSize: 15,
         textAlign: 'center',
         fontFamily: 'Roboto-Bold',

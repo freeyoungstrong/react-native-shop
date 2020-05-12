@@ -1,6 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import 'react-native-gesture-handler';
 
 import store from 'shared/redux/store';
@@ -10,10 +10,18 @@ if (__DEV__) {
     import('./reactotron-config').then(() => console.log('Reactotron Configured'));
 }
 
+const MyTheme = {
+    ...DefaultTheme,
+    colors: {
+        ...DefaultTheme.colors,
+        background: 'white',
+    },
+};
+
 const App = () => {
     return (
         <Provider store={store}>
-            <NavigationContainer>
+            <NavigationContainer theme={MyTheme}>
                 <Navigator />
             </NavigationContainer>
         </Provider>
