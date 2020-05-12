@@ -1,10 +1,10 @@
 import { FETCH_CATEGORIES_FAILURE, FETCH_CATEGORIES_REQUEST, FETCH_CATEGORIES_SUCCESS } from './actionTypes';
-import { fetchCategories } from '../../services';
+import { getCategories } from '../../services';
 
 export const fetchCategories = () => async dispatch => {
     dispatch(fetchCategoriesRequest());
     try {
-        const response = await fetchCategories();
+        const response = await getCategories();
         const result = await response.json();
         const categories = result.subcategories;
         dispatch(fetchCategoriesSuccess(categories));
@@ -14,8 +14,8 @@ export const fetchCategories = () => async dispatch => {
     }
 };
 
-const fetchCategoriesRequest = () => dispatch => {
-    dispatch({ type: FETCH_CATEGORIES_REQUEST });
+const fetchCategoriesRequest = () => {
+    return { type: FETCH_CATEGORIES_REQUEST };
 };
 
 const fetchCategoriesSuccess = categories => dispatch => {

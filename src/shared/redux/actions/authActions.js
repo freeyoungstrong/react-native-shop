@@ -33,8 +33,8 @@ export const login = ({ loginName, password }) => async dispatch => {
     }
 };
 
-const loginRequest = () => dispatch => {
-    dispatch({ type: LOGIN_REQUEST });
+const loginRequest = () => {
+    return { type: LOGIN_REQUEST };
 };
 
 const loginSuccess = ({ status, userToken }) => dispatch => {

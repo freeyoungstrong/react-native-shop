@@ -14,22 +14,18 @@ export const ProductsList = ({ navigation }) => {
         [navigation],
     );
 
-    const productsList = useSelector(state => state.products.products).map(prod => {
-        const {
-            id,
-            cell: { name, price, thumb },
-        } = prod;
-        return (
-            <TouchableOpacity onPress={onPressProduct(prod)} key={id}>
-                <ProductCard title={name} price={price} key={prod.id} source={`http:${thumb}`} />
+    const productsList = useSelector(({ products: { products = [] } = {} } = {}) => products).map(
+        ({ id, cell: { name, price, thumb, description } }) => (
+            <TouchableOpacity onPress={onPressProduct({ id, cell: { name, price, thumb, description } })} key={id}>
+                <ProductCard title={name} price={price} key={id} source={`http:${thumb}`} />
             </TouchableOpacity>
-        );
-    });
+        ),
+    );
 
     return (
         <View>
             <View style={styles.productsList}>
-                {productsList ? productsList : <Text>Here should be list of products</Text>}
+                {productsList.length > 1 ? productsList : <Text>Here should be list of products</Text>}
             </View>
         </View>
     );

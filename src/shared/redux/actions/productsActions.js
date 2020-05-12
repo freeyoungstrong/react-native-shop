@@ -1,12 +1,12 @@
 import { FETCH_PRODUCTS_REQUEST, FETCH_PRODUCTS_SUCCESS, FETCH_PRODUCTS_FAILURE } from './actionTypes';
-import { fetchProducts } from '../../services';
+import { getProducts } from '../../services';
 
 export const fetchProducts = () => async dispatch => {
     dispatch(fetchProductsRequest());
     try {
-        const response = await fetchProducts();
+        const response = await getProducts();
         const result = await response.json();
-        const products = result.rows;
+        const { rows: products } = result;
         dispatch(fetchProductsSuccess(products));
     } catch (error) {
         console.log('Error while fetching products: ', error);
@@ -14,8 +14,8 @@ export const fetchProducts = () => async dispatch => {
     }
 };
 
-const fetchProductsRequest = () => dispatch => {
-    dispatch({ type: FETCH_PRODUCTS_REQUEST });
+const fetchProductsRequest = () => {
+    return { type: FETCH_PRODUCTS_REQUEST };
 };
 
 const fetchProductsSuccess = products => dispatch => {
