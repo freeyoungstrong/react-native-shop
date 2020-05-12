@@ -5,6 +5,7 @@ export const routes = {
     PRODUCT_DETAILS: 'ProductDetails',
     WELCOME: 'Welcome',
     HOME: 'Home',
+    MAP: 'Map',
 };
 
 export const USER = 'USER';
