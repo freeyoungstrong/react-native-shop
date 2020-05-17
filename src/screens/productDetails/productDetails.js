@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, ScrollView, Alert, Image } from 'react-native';
+import ToastModule from 'react-native-toast-module';
 import he from 'he';
 
 import { styles } from './styles';
@@ -15,7 +16,7 @@ export const ProductDetails = ({ route }) => {
         Alert.alert(loc('productDetails.buttonWishlist.message'));
     };
     const onPressButtonAddToCart = () => {
-        Alert.alert(loc('productDetails.buttonAddToCart.message'));
+        ToastModule.show('Product added');
     };
 
     return (
