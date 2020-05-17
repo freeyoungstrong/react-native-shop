@@ -1,9 +1,10 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { Text, Alert } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import LinearGradient from 'react-native-linear-gradient';
 import NetInfo from '@react-native-community/netinfo';
 import { useDispatch } from 'react-redux';
+import Analytics from 'appcenter-analytics';
 
 import { styles } from './styles';
 import { Input, Button, NavQuestion, ModalView } from 'shared/components';
@@ -12,6 +13,10 @@ import { routes, USER } from 'shared/constants';
 import { colors } from 'shared/assets';
 import { login } from 'shared/redux/actions';
 import { getData } from 'shared/utils';
+
+useEffect(async () => {
+    await Analytics.setEnabled(true);
+}, []);
 
 export const LoginScreen = ({ navigation }) => {
     const [loginName, onChangeLoginName] = useState('');

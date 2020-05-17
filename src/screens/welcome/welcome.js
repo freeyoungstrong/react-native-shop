@@ -5,6 +5,8 @@ import LottieView from 'lottie-react-native';
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
 import PushNotificationIOS from '@react-native-community/push-notification-ios';
 import PushNotification from 'react-native-push-notification';
+import ToastModule from 'react-native-toast-module';
+import Crashes from 'appcenter-crashes';
 
 import { styles } from './styles';
 import { routes, USER } from 'shared/constants';
@@ -52,3 +54,39 @@ export const WelcomeScreen = ({ navigation }) => {
         </LinearGradient>
     );
 };
+
+Crashes.setListener({
+    shouldAwaitUserConfirmation() {
+        console.log('Should await user confirmation');
+        Alert.alert('One or more crashes were detected, do you want to report them?', null, [
+            {
+                text: 'Yes, and ask me again if it occurs again.',
+                onPress: () => Crashes.notifyUserConfirmation(UserConfirmation.SEND),
+            },
+            {
+                text: 'Yes, always send them',
+                onPress: () => Crashes.notifyUserConfirmation(UserConfirmation.ALWAYS_SEND),
+            },
+            {
+                text: "Don't send at this time",
+                onPress: () => Crashes.notifyUserConfirmation(UserConfirmation.DONT_SEND),
+            },
+        ]);
+        return true;
+    },
+
+    onBeforeSending() {
+        console.log('Will send crash. onBeforeSending is invoked.');
+        ToastModule.show('Sending crashes...');
+    },
+
+    onSendingSucceeded() {
+        console.log('Did send crash. onSendingSucceeded is invoked.');
+        ToastModule.show('Sending crashes succeeded.');
+    },
+
+    onSendingFailed() {
+        console.log('Failed sending crash. onSendingFailed is invoked.');
+        ToastModule.show('Sending crashes failed, please check verbose logs.');
+    },
+});
