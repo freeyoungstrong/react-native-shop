@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input component should render fine 1`] = `
+<TextInput
+  allowFontScaling={true}
+  autoCapitalize="none"
+  onChangeText={[MockFunction]}
+  placeholder=""
+  rejectResponderTermination={true}
+  secureTextEntry={false}
+  style={
+    Object {
+      "borderBottomWidth": 1,
+      "borderColor": "#000000",
+      "color": "#000000",
+      "fontFamily": "Roboto-Regular",
+      "fontSize": 23,
+      "height": 40,
+      "marginVertical": 15,
+      "width": "85%",
+    }
+  }
+  underlineColorAndroid="transparent"
+  value=""
+/>
+`;

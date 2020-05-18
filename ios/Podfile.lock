@@ -215,7 +215,7 @@ PODS:
     - React
   - react-native-maps (0.27.1):
     - React
-  - react-native-netinfo (5.8.1):
+  - react-native-netinfo (5.9.0):
     - React
   - react-native-safe-area-context (0.7.3):
     - React
@@ -302,7 +302,7 @@ DEPENDENCIES:
   - react-native-maps (from `../node_modules/react-native-maps`)
   - "react-native-netinfo (from `../node_modules/@react-native-community/netinfo`)"
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
-  - react-native-toast-module (from `../node_modules/react-native-toast-module`)
+  - react-native-toast-module (from `../libs/react-native-toast-module`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
   - React-RCTBlob (from `../node_modules/react-native/Libraries/Blob`)
@@ -375,7 +375,7 @@ EXTERNAL SOURCES:
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
   react-native-toast-module:
-    :path: "../node_modules/react-native-toast-module"
+    :path: "../libs/react-native-toast-module"
   React-RCTActionSheet:
     :path: "../node_modules/react-native/Libraries/ActionSheetIOS"
   React-RCTAnimation:
@@ -440,8 +440,8 @@ SPEC CHECKSUMS:
   React-jsinspector: fa0ecc501688c3c4c34f28834a76302233e29dc0
   react-native-google-maps: 0a989abda71059db2caa98b9dacca7a8f38a47d0
   react-native-maps: f4b89da81626ad7f151a8bfcb79733295d31ce5c
-  react-native-netinfo: 73d0d151215683d128908796063e344030ef20fa
-  react-native-safe-area-context: e200d4433aba6b7e60b52da5f37af11f7a0b0392
+  react-native-netinfo: 2beabb5930a15eef58093c66910cd5b733acc8dd
+  react-native-safe-area-context: 8260e5157617df4b72865f44006797f895b2ada7
   react-native-toast-module: 2527a0eb6001a1d61916f6e2242d10a7b4d22e29
   React-RCTActionSheet: 600b4d10e3aea0913b5a92256d2719c0cdd26d76
   React-RCTAnimation: 791a87558389c80908ed06cc5dfc5e7920dfa360
