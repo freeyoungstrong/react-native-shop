@@ -9,8 +9,9 @@
         "test": "jest",
         "lint": "eslint .",
         "react-devtools": "react-devtools",
-        "reinstall": "rm -rf node_modules && yarn install && cd ios && rm -rf Pods && pod install",
-        "lint-fix": "eslint . --fix"
+        "reinstall": "rm -rf node_modules && npm install && cd ios && rm -rf Pods && pod install",
+        "lint-fix": "eslint . --fix",
+        "storybook": "start-storybook -p 7007"
     },
     "husky": {
         "hooks": {
@@ -56,6 +57,7 @@
         "@babel/core": "^7.6.2",
         "@babel/runtime": "^7.6.2",
         "babel-jest": "^24.9.0",
+        "babel-loader": "^8.1.0",
         "babel-plugin-module-resolver": "^4.0.0",
         "enzyme": "^3.11.0",
         "enzyme-adapter-react-16": "^1.15.2",
