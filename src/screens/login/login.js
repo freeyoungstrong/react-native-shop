@@ -1,9 +1,10 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { Text, Alert } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import LinearGradient from 'react-native-linear-gradient';
 import NetInfo from '@react-native-community/netinfo';
 import { useDispatch } from 'react-redux';
+import Analytics from 'appcenter-analytics';
 
 import { styles } from './styles';
 import { Input, Button, NavQuestion, ModalView } from 'shared/components';
@@ -19,6 +20,10 @@ export const LoginScreen = ({ navigation }) => {
     const [modalVisible, setModalVisible] = useState(false);
     const [modalAskInternetVisible, setModalAskInternetVisible] = useState(false);
     const dispatch = useDispatch();
+
+    useEffect(async () => {
+        await Analytics.setEnabled(true);
+    }, []);
 
     const onPressSignIn = useCallback(async () => {
         NetInfo.fetch().then(state => {
