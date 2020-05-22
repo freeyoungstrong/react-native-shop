@@ -22,3 +22,11 @@ jest.mock('react-native-gesture-handler', () => {
 });
 
 jest.mock('react-native-reanimated', () => require('react-native-reanimated/mock'));
+
+jest.mock('@react-native-community/push-notification-ios', () => {
+    return {
+        addEventListener: jest.fn(),
+        requestPermissions: jest.fn(() => Promise.resolve()),
+        getInitialNotification: jest.fn(() => Promise.resolve()),
+    };
+});

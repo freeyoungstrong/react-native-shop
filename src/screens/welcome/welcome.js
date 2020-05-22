@@ -1,4 +1,5 @@
 import React, { useCallback } from 'react';
+import { Platform } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import LottieView from 'lottie-react-native';
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
