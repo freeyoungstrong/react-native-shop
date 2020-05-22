@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavQuestion component should render fine 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[MockFunction]}
+  style={
+    Array [
+      Object {
+        "marginVertical": 10,
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#4f73f9",
+        "fontFamily": "Roboto-Regular",
+        "fontSize": 20,
+      }
+    }
+  >
+    Title
+  </Text>
+</TouchableOpacity>
+`;
