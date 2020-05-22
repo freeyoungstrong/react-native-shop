@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, Text, ScrollView, Alert, Image } from 'react-native';
-import ToastModule from 'react-native-toast-module';
 import he from 'he';
+import ToastModule from 'react-native-toast-module';
+import PushNotification from 'react-native-push-notification';
 
 import { styles } from './styles';
 import { Button, Divider } from 'shared/components';
@@ -17,6 +18,18 @@ export const ProductDetails = ({ route }) => {
     };
     const onPressButtonAddToCart = () => {
         ToastModule.show('Product added');
+        PushNotification.localNotification({
+            /* Android Only Properties */
+            largeIcon: 'ic_launcher_round',
+            bigText: name,
+            vibrate: false,
+
+            /* iOS and Android properties */
+            title: 'Your product added to cart',
+            message: name,
+            playSound: true,
+            soundName: 'default',
+        });
     };
 
     return (
