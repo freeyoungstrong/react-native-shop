@@ -1,7 +1,7 @@
 import { Vibration } from 'react-native';
 
 import { LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAILURE, LOGOUT } from './actionTypes';
-import { storeData, deleteData } from 'shared/utils';
+import { storeData, removeData } from 'shared/utils';
 import { USER, API_URL } from 'shared/constants';
 
 const ONE_SECOND_IN_MS = 1000;
@@ -46,6 +46,6 @@ const loginFailure = ({ status, error }) => dispatch => {
 };
 
 export const logout = () => async dispatch => {
-    await deleteData(USER);
+    await removeData(USER);
     dispatch({ type: LOGOUT });
 };

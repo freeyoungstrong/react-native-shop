@@ -1,6 +1,11 @@
 {
     "common": {
-        "ok": "OK"
+        "ok": "OK",
+        "back": "Back"
+    },
+    "drawer-navigation": {
+        "share": "Share",
+        "logout": "Logout"
     },
     "login": {
         "title": "Ecommerce Store",

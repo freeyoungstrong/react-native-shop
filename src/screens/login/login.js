@@ -20,10 +20,10 @@ export const LoginScreen = ({ navigation }) => {
     const [modalVisible, setModalVisible] = useState(false);
     const [modalAskInternetVisible, setModalAskInternetVisible] = useState(false);
     const dispatch = useDispatch();
-
-    useEffect(async () => {
-        await Analytics.setEnabled(true);
-    }, []);
+    // TODO:Fix analytics
+    // useEffect(async () => {
+    //     await Analytics.setEnabled(true);
+    // }, []);
 
     const onPressSignIn = useCallback(async () => {
         NetInfo.fetch().then(state => {
@@ -36,6 +36,8 @@ export const LoginScreen = ({ navigation }) => {
 
         if (await getData(USER)) {
             navigation.navigate(routes.HOME, { screen: routes.MAIN });
+        } else {
+            setModalVisible(true);
         }
     }, [dispatch, loginName, password]);
 
