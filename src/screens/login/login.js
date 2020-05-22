@@ -14,16 +14,16 @@ import { colors } from 'shared/assets';
 import { login } from 'shared/redux/actions';
 import { getData } from 'shared/utils';
 
-useEffect(async () => {
-    await Analytics.setEnabled(true);
-}, []);
-
 export const LoginScreen = ({ navigation }) => {
     const [loginName, onChangeLoginName] = useState('');
     const [password, onChangePassword] = useState('');
     const [modalVisible, setModalVisible] = useState(false);
     const [modalAskInternetVisible, setModalAskInternetVisible] = useState(false);
     const dispatch = useDispatch();
+
+    useEffect(async () => {
+        await Analytics.setEnabled(true);
+    }, []);
 
     const onPressSignIn = useCallback(async () => {
         NetInfo.fetch().then(state => {

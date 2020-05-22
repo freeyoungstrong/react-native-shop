@@ -30,3 +30,12 @@ jest.mock('@react-native-community/push-notification-ios', () => {
         getInitialNotification: jest.fn(() => Promise.resolve()),
     };
 });
+
+jest.mock('appcenter-crashes', () => {
+    return {
+        setListener: jest.fn(),
+        onBeforeSending: jest.fn(),
+        onSendingSucceeded: jest.fn(),
+        onSendingFailed: jest.fn(),
+    };
+});
