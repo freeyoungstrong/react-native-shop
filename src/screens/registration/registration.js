@@ -57,7 +57,6 @@ export const RegistrationScreen = ({ navigation }) => {
             <Button
                 title={loc('registration.button.title').toUpperCase()}
                 onPress={onPressSignUp}
-                // onPress={signUp} // this is temporary logic
                 buttonStyle={styles.buttonStyle}
                 buttonStyleTitle={styles.buttonTitle}
             />
