@@ -4,3 +4,4 @@ export * from './productDetails/productDetails';
 export * from './registration/registration';
 export * from './welcome/welcome';
 export * from './map/map';
+export * from './cart/cart';

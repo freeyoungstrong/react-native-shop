@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import { Platform } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import LottieView from 'lottie-react-native';
@@ -7,26 +7,21 @@ import PushNotificationIOS from '@react-native-community/push-notification-ios';
 import PushNotification from 'react-native-push-notification';
 import ToastModule from 'react-native-toast-module';
 import Crashes from 'appcenter-crashes';
+import { useDispatch } from 'react-redux';
 
 import { styles } from './styles';
 import { routes, USER } from 'shared/constants';
 import { colors } from 'shared/assets';
 import { getData } from 'shared/utils';
+import { fetchCategories, fetchProducts } from 'shared/redux/actions';
 
 export const WelcomeScreen = ({ navigation }) => {
-    PushNotification.configure({
-        onNotification: function(notification) {
-            console.log('NOTIFICATION:', notification);
-            notification.finish(PushNotificationIOS.FetchResult.NoData);
-        },
-        permissions: {
-            alert: true,
-            badge: true,
-            sound: true,
-        },
-        popInitialNotification: true,
-        requestPermissions: Platform.OS === 'ios',
-    });
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(fetchCategories());
+        dispatch(fetchProducts());
+    }, [dispatch]);
 
     const onAnimationComplete = useCallback(async () => {
         if (await getData(USER)) {
@@ -35,6 +30,7 @@ export const WelcomeScreen = ({ navigation }) => {
             navigation.navigate(routes.LOGIN);
         }
     }, []);
+
     return (
         <LinearGradient
             colors={[colors.lightBlue, colors.lightPurple, colors.lightPink, colors.lightOrange]}
@@ -54,6 +50,20 @@ export const WelcomeScreen = ({ navigation }) => {
         </LinearGradient>
     );
 };
+
+PushNotification.configure({
+    onNotification: function(notification) {
+        console.log('NOTIFICATION:', notification);
+        notification.finish(PushNotificationIOS.FetchResult.NoData);
+    },
+    permissions: {
+        alert: true,
+        badge: true,
+        sound: true,
+    },
+    popInitialNotification: true,
+    requestPermissions: Platform.OS === 'ios',
+});
 
 Crashes.setListener({
     shouldAwaitUserConfirmation() {

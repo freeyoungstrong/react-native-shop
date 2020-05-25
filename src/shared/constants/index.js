@@ -6,6 +6,7 @@ export const routes = {
     WELCOME: 'Welcome',
     HOME: 'Home',
     MAP: 'Map',
+    CART: 'Cart',
 };
 
 export const USER = 'USER';

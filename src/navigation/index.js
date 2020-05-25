@@ -6,7 +6,7 @@ import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import Share from 'react-native-share';
 import { useDispatch } from 'react-redux';
 
-import { LoginScreen, RegistrationScreen, Main, ProductDetails, WelcomeScreen, MapScreen } from 'screens';
+import { LoginScreen, RegistrationScreen, Main, ProductDetails, WelcomeScreen, MapScreen, CartScreen } from 'screens';
 import { logout } from 'shared/redux/actions';
 import { routes } from 'shared/constants';
 import { colors, loc } from 'shared/assets';
@@ -52,7 +52,7 @@ export const Navigator = () => {
             <DrawerStack.Navigator drawerContent={props => <CustomDrawerContent {...props} />}>
                 <DrawerStack.Screen name={routes.MAIN} component={HomeStackNavigator} />
                 <DrawerStack.Screen name={routes.MAP} component={MapScreen} />
-                <DrawerStack.Screen name="MockScreen2" component={ProductDetails} />
+                <DrawerStack.Screen name={routes.CART} component={CartScreen} />
             </DrawerStack.Navigator>
         );
     };
