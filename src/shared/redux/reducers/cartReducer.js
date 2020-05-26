@@ -7,6 +7,7 @@ import {
 let initialState = {
     products: [],
     error: null,
+    // total: 0,
 };
 
 export const cartReducer = (state = initialState, action) => {
@@ -18,6 +19,7 @@ export const cartReducer = (state = initialState, action) => {
             return {
                 ...state,
                 products: action.payload,
+                // total: action.total
             };
         }
         case ADD_PRODUCT_TO_CART_FAILURE: {

@@ -40,6 +40,7 @@ export const styles = StyleSheet.create({
         marginHorizontal: 10,
         fontSize: 17,
         marginBottom: 5,
+        fontFamily: 'Roboto-Regular',
     },
     buttonColorOfDeviceStyle: {
         width: '20%',
