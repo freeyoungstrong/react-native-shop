@@ -1,22 +1,31 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { View, Text, ScrollView, Alert, Image } from 'react-native';
 import he from 'he';
 import ToastModule from 'react-native-toast-module';
 import PushNotification from 'react-native-push-notification';
+import { useDispatch } from 'react-redux';
 
 import { styles } from './styles';
 import { Button, Divider } from 'shared/components';
 import { loc } from 'shared/assets';
+import { addProductTocart } from 'shared/redux/actions';
+import { getData } from 'shared/utils';
+import { USER } from 'shared/constants';
 
 export const ProductDetails = ({ route }) => {
     const { product } = route.params;
     const {
         cell: { name, price, thumb, description },
+        id,
     } = product;
-    const onPressButtonWishList = () => {
+    const dispatch = useDispatch();
+    const onPressButtonWishList = useCallback(() => {
         Alert.alert(loc('productDetails.buttonWishlist.message'));
-    };
-    const onPressButtonAddToCart = () => {
+    }, []);
+    const onPressButtonAddToCart = useCallback(async () => {
+        const token = await getData(USER);
+        const quantity = 1;
+        dispatch(addProductTocart(token, id, quantity));
         ToastModule.show('Product added');
         PushNotification.localNotification({
             /* Android Only Properties */
@@ -30,8 +39,9 @@ export const ProductDetails = ({ route }) => {
             playSound: true,
             soundName: 'default',
         });
-    };
+    }, [dispatch, id]);
 
+    // TODO: implement react-native-easy-markdown
     return (
         <ScrollView style={styles.wrap}>
             <View style={styles.container}>

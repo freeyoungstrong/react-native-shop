@@ -17,16 +17,14 @@ export const ProductsList = ({ navigation }) => {
     const productsList = useSelector(({ products: { products = [] } = {} } = {}) => products).map(
         ({ id, cell: { name, price, thumb, description } }) => (
             <TouchableOpacity onPress={onPressProduct({ id, cell: { name, price, thumb, description } })} key={id}>
-                <ProductCard title={name} price={price} key={id} source={`http:${thumb}`} />
+                <ProductCard title={name} price={price} source={`http:${thumb}`} />
             </TouchableOpacity>
         ),
     );
 
     return (
-        <View>
-            <View style={styles.productsList}>
-                {productsList.length > 1 ? productsList : <Text>Here should be list of products</Text>}
-            </View>
+        <View style={styles.productsList}>
+            {productsList.length > 1 ? productsList : <Text>Here should be list of products</Text>}
         </View>
     );
 };
