@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import he from 'he';
 
 import { styles } from './styles';
-import { addProductTocart } from 'shared/redux/actions';
+import { removeProductsFromCart } from 'shared/redux/actions';
 import { getData } from 'shared/utils';
 import { USER } from 'shared/constants';
 
@@ -13,9 +13,9 @@ export const CartScreen = () => {
     const dispatch = useDispatch();
     const onPressDeleteAll = useCallback(async () => {
         const token = await getData(USER);
-        dispatch(addProductTocart(token, null, null, true));
+        dispatch(removeProductsFromCart(token, true));
     }, [dispatch, USER]);
-    // const totalPrice = useSelector(({ productsInCart: { total = '' } = {} } = {}) => total);
+    const totalPrice = useSelector(({ productsInCart: { total = '' } = {} } = {}) => total);
     const productsInCart = useSelector(({ productsInCart: { products = [] } = {} } = {}) => products).map(
         ({ thumb, name, key, quantity, price }) => (
             <View style={styles.productItem} key={key}>
@@ -41,7 +41,7 @@ export const CartScreen = () => {
                     <>
                         {productsInCart}
                         <View style={styles.footer}>
-                            {/* <Text>{`Total price: ${totalPrice}`}</Text> */}
+                            <Text>{`Total price: ${totalPrice}`}</Text>
                             <TouchableOpacity style={styles.button} onPress={onPressDeleteAll}>
                                 <Text>Delete all</Text>
                                 <Icon size={30} name="delete" />
