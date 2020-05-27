@@ -23,10 +23,10 @@ export const login = ({ loginName, password }) => async dispatch => {
         const result = await response.json();
         if (result.status === 1) {
             await storeData(USER, `${result.token}`);
-            dispatch(loginSuccess({ status: result.status, userToken: result.token }));
+            dispatch(loginSuccess({ token: result.token }));
         } else {
             Vibration.vibrate(ONE_SECOND_IN_MS);
-            dispatch(loginFailure({ status: result.status, error: result.error }));
+            dispatch(loginFailure({ error: result.error }));
         }
     } catch (error) {
         dispatch(loginFailure(error));
@@ -37,12 +37,12 @@ const loginRequest = () => {
     return { type: LOGIN_REQUEST };
 };
 
-const loginSuccess = ({ status, userToken }) => dispatch => {
-    dispatch({ type: LOGIN_SUCCESS, payload: { status, userToken } });
+export const loginSuccess = ({ token }) => dispatch => {
+    dispatch({ type: LOGIN_SUCCESS, payload: { token } });
 };
 
-const loginFailure = ({ status, error }) => dispatch => {
-    dispatch({ type: LOGIN_FAILURE, payload: { status, error } });
+const loginFailure = ({ error }) => dispatch => {
+    dispatch({ type: LOGIN_FAILURE, payload: { error } });
 };
 
 export const logout = () => async dispatch => {

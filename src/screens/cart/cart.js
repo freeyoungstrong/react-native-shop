@@ -22,7 +22,7 @@ export const CartScreen = () => {
 
     return (
         <ScrollView contentContainerStyle={styles.container}>
-            {productsInCart.length > 1 ? productsInCart : <Text>Your cart is empty</Text>}
+            {productsInCart.length > 0 ? productsInCart : <Text>Your cart is empty</Text>}
         </ScrollView>
     );
 };
