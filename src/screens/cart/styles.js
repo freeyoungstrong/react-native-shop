@@ -43,7 +43,6 @@ export const styles = StyleSheet.create({
         justifyContent: 'space-between',
         borderRadius: 8,
         width: '90%',
-        // height: '12%',
         height: 100,
         shadowColor: colors.black,
         shadowOffset: { width: 2, height: 2 },

@@ -22,8 +22,8 @@ export const CartScreen = ({ navigation }) => {
             <View style={styles.productItem} key={key}>
                 <View style={styles.textContainer}>
                     <Text style={styles.text}>{he.decode(name)}</Text>
-                    <Text style={styles.text}>{`Price: ${price}`}</Text>
-                    <Text style={styles.text}>{`Quantity: ${quantity}`}</Text>
+                    <Text style={styles.text}>{loc('cart.product.price', { price })}</Text>
+                    <Text style={styles.text}>{loc('cart.product.quantity', { quantity })}</Text>
                 </View>
                 <Image
                     style={styles.image}

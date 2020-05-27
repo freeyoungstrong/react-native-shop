@@ -84,6 +84,10 @@
         "title": "My cart",
         "button": "Remove all",
         "price": "Total price: %{totalPrice}",
-        "empty": "Your cart is empty"
+        "empty": "Your cart is empty",
+        "product": {
+            "price": "Price: %{price}",
+            "quantity": "Quantity: %{quantity}"
+        }
     }
 }
