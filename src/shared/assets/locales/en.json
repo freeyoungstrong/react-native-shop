@@ -79,5 +79,11 @@
         "lastname": "Lastname: %{lastname}",
         "email": "Email: %{email}",
         "button": "Logout"
+    },
+    "cart": {
+        "title": "My cart",
+        "button": "Remove all",
+        "price": "Total price: %{totalPrice}",
+        "empty": "Your cart is empty"
     }
 }

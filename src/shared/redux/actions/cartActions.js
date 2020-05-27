@@ -11,6 +11,32 @@ import {
 } from './actionTypes';
 import { cart } from '../../services';
 
+export const fetchCart = token => async dispatch => {
+    dispatch(fetchCartRequest());
+    const formData = new FormData();
+    formData.append('token', token);
+    const requestOptions = {
+        method: 'POST',
+        headers: {
+            Accept: 'application/json',
+        },
+        body: formData,
+    };
+    try {
+        const response = await cart(requestOptions);
+        const result = await response.json();
+        const { products } = result;
+        const totalPrice = result.totals[0].text;
+        dispatch(fetchCartSuccess(products, totalPrice));
+    } catch (error) {
+        dispatch(fetchCartFailure(error));
+    }
+};
+
+const fetchCartRequest = () => requestCreator(FETCH_CART_REQUEST);
+const fetchCartSuccess = (products, totalPrice) => successCreator(FETCH_CART_SUCCESS, products, totalPrice);
+const fetchCartFailure = error => failureCreator(FETCH_CART_FAILURE, error);
+
 export const addProductTocart = (token, productId, quantity) => async dispatch => {
     dispatch(addProductToCartRequest());
     const formData = new FormData();
@@ -27,7 +53,7 @@ export const addProductTocart = (token, productId, quantity) => async dispatch =
     try {
         const response = await cart(requestOptions);
         const result = await response.json();
-        const product = result.products;
+        const { products: product } = result;
         const totalPrice = result.totals[0].text;
         dispatch(addProductToCartSuccess(product, totalPrice));
     } catch (error) {
@@ -35,27 +61,10 @@ export const addProductTocart = (token, productId, quantity) => async dispatch =
     }
 };
 
-export const fetchCart = token => async dispatch => {
-    dispatch(fetchCartRequest());
-    const formData = new FormData();
-    formData.append('token', token);
-    const requestOptions = {
-        method: 'POST',
-        headers: {
-            Accept: 'application/json',
-        },
-        body: formData,
-    };
-    try {
-        const response = await cart(requestOptions);
-        const result = await response.json();
-        const products = result.products;
-        const totalPrice = result.totals[0].text;
-        dispatch(fetchCartSuccess(products, totalPrice));
-    } catch (error) {
-        dispatch(fetchCartFailure(error));
-    }
-};
+const addProductToCartRequest = () => requestCreator(ADD_PRODUCT_TO_CART_REQUEST);
+const addProductToCartSuccess = (product, totalPrice) =>
+    successCreator(ADD_PRODUCT_TO_CART_SUCCESS, product, totalPrice);
+const addProductToCartFailure = error => failureCreator(ADD_PRODUCT_TO_CART_FAILURE, error);
 
 export const removeProductsFromCart = (token, removeAll) => async dispatch => {
     dispatch(removeProductsFromCartRequest());
@@ -72,46 +81,26 @@ export const removeProductsFromCart = (token, removeAll) => async dispatch => {
     try {
         const response = await cart(requestOptions);
         const result = await response.json();
-        const products = result.products;
-        const totalPrice = result.totals;
+        const { products, totals: totalPrice } = result;
         dispatch(removeProductsFromCartSuccess(products, totalPrice));
     } catch (error) {
         dispatch(removeProductsFromCartFailure(error));
     }
 };
 
-const removeProductsFromCartRequest = () => {
-    return { type: REMOVE_PRODUCTS_FROM_CART_REQUEST };
+const removeProductsFromCartRequest = () => requestCreator(REMOVE_PRODUCTS_FROM_CART_REQUEST);
+const removeProductsFromCartSuccess = (products, totalPrice) =>
+    successCreator(REMOVE_PRODUCTS_FROM_CART_SUCCESS, products, totalPrice);
+const removeProductsFromCartFailure = error => failureCreator(REMOVE_PRODUCTS_FROM_CART_FAILURE, error);
+
+const requestCreator = type => {
+    return { type: type };
 };
 
-const removeProductsFromCartSuccess = (products, totalPrice) => dispatch => {
-    dispatch({ type: REMOVE_PRODUCTS_FROM_CART_SUCCESS, payload: products, total: totalPrice });
+const successCreator = (type, products, totalPrice) => dispatch => {
+    dispatch({ type: type, payload: products, total: totalPrice });
 };
 
-const removeProductsFromCartFailure = error => dispatch => {
-    dispatch({ type: REMOVE_PRODUCTS_FROM_CART_FAILURE, payload: error });
-};
-
-const fetchCartRequest = () => {
-    return { type: FETCH_CART_REQUEST };
-};
-
-const fetchCartSuccess = (products, totalPrice) => dispatch => {
-    dispatch({ type: FETCH_CART_SUCCESS, payload: products, total: totalPrice });
-};
-
-const fetchCartFailure = error => dispatch => {
-    dispatch({ type: FETCH_CART_FAILURE, payload: error });
-};
-
-const addProductToCartRequest = () => {
-    return { type: ADD_PRODUCT_TO_CART_REQUEST };
-};
-
-const addProductToCartSuccess = (product, totalPrice) => dispatch => {
-    dispatch({ type: ADD_PRODUCT_TO_CART_SUCCESS, payload: product, total: totalPrice });
-};
-
-const addProductToCartFailure = error => dispatch => {
-    dispatch({ type: ADD_PRODUCT_TO_CART_FAILURE, payload: error });
+const failureCreator = (type, error) => dispatch => {
+    dispatch({ type: type, payload: error });
 };

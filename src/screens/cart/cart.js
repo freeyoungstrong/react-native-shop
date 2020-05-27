@@ -8,10 +8,11 @@ import { styles } from './styles';
 import { removeProductsFromCart } from 'shared/redux/actions';
 import { getData } from 'shared/utils';
 import { USER } from 'shared/constants';
+import { loc } from 'shared/assets';
 
-export const CartScreen = () => {
+export const CartScreen = ({ navigation }) => {
     const dispatch = useDispatch();
-    const onPressDeleteAll = useCallback(async () => {
+    const onPressRemoveAll = useCallback(async () => {
         const token = await getData(USER);
         dispatch(removeProductsFromCart(token, true));
     }, [dispatch, USER]);
@@ -35,23 +36,32 @@ export const CartScreen = () => {
     );
 
     return (
-        <ScrollView>
-            <View style={styles.container}>
-                {productsInCart.length > 0 ? (
-                    <>
-                        {productsInCart}
-                        <View style={styles.footer}>
-                            <Text>{`Total price: ${totalPrice}`}</Text>
-                            <TouchableOpacity style={styles.button} onPress={onPressDeleteAll}>
-                                <Text>Delete all</Text>
-                                <Icon size={30} name="delete" />
-                            </TouchableOpacity>
-                        </View>
-                    </>
-                ) : (
-                    <Text>Your cart is empty</Text>
-                )}
+        <>
+            <View style={styles.header}>
+                <TouchableOpacity onPress={navigation.openDrawer}>
+                    <Icon size={35} name="menu" />
+                </TouchableOpacity>
+                <Text>{loc('cart.title')}</Text>
+                <View />
             </View>
-        </ScrollView>
+            <ScrollView>
+                <View style={styles.container}>
+                    {productsInCart.length > 0 ? (
+                        <>
+                            {productsInCart}
+                            <View style={styles.footer}>
+                                <Text>{loc('cart.price', { totalPrice })}</Text>
+                                <TouchableOpacity style={styles.button} onPress={onPressRemoveAll}>
+                                    <Text>{loc('cart.button')}</Text>
+                                    <Icon size={30} name="delete" />
+                                </TouchableOpacity>
+                            </View>
+                        </>
+                    ) : (
+                        <Text style={styles.emptyCart}>{loc('cart.empty')}</Text>
+                    )}
+                </View>
+            </ScrollView>
+        </>
     );
 };

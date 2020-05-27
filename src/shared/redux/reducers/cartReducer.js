@@ -23,7 +23,9 @@ export const cartReducer = (state = initialState, action) => {
         case REMOVE_PRODUCTS_FROM_CART_REQUEST: {
             return { ...state };
         }
-        case ADD_PRODUCT_TO_CART_SUCCESS: {
+        case FETCH_CART_SUCCESS:
+        case ADD_PRODUCT_TO_CART_SUCCESS:
+        case REMOVE_PRODUCTS_FROM_CART_SUCCESS: {
             return {
                 ...state,
                 products: action.payload,
@@ -36,20 +38,6 @@ export const cartReducer = (state = initialState, action) => {
             return {
                 ...state,
                 error: action.payload,
-            };
-        }
-        case FETCH_CART_SUCCESS: {
-            return {
-                ...state,
-                products: action.payload,
-                total: action.total,
-            };
-        }
-        case REMOVE_PRODUCTS_FROM_CART_SUCCESS: {
-            return {
-                ...state,
-                products: action.payload,
-                total: action.total,
             };
         }
         default: {

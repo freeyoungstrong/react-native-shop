@@ -7,6 +7,16 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
+    header: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        width: '100%',
+        height: 100,
+        paddingHorizontal: '4%',
+        paddingTop: 35,
+        backgroundColor: colors.lightBlue,
+    },
     image: {
         width: 70,
         height: 70,
@@ -49,5 +59,8 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
+    },
+    emptyCart: {
+        marginTop: 20,
     },
 });
