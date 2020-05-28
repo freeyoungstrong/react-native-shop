@@ -8,11 +8,11 @@ import PushNotification from 'react-native-push-notification';
 import ToastModule from 'react-native-toast-module';
 import Crashes from 'appcenter-crashes';
 import { useDispatch } from 'react-redux';
+import * as Keychain from 'react-native-keychain';
 
 import { styles } from './styles';
-import { routes, USER } from 'shared/constants';
+import { routes } from 'shared/constants';
 import { colors } from 'shared/assets';
-import { getData } from 'shared/utils';
 import { fetchCategories, fetchProducts, loginSuccess } from 'shared/redux/actions';
 
 export const WelcomeScreen = ({ navigation }) => {
@@ -24,9 +24,9 @@ export const WelcomeScreen = ({ navigation }) => {
     }, [dispatch]);
 
     const onAnimationComplete = useCallback(async () => {
-        const token = await getData(USER);
-        if (token) {
-            dispatch(loginSuccess({ token }));
+        const credentials = await Keychain.getGenericPassword();
+        if (credentials) {
+            dispatch(loginSuccess({ token: credentials.password }));
             navigation.navigate(routes.HOME, { screen: routes.MAIN });
         } else {
             navigation.navigate(routes.LOGIN);

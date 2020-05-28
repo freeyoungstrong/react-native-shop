@@ -6,16 +6,14 @@ import he from 'he';
 
 import { styles } from './styles';
 import { removeProductsFromCart } from 'shared/redux/actions';
-import { getData } from 'shared/utils';
-import { USER } from 'shared/constants';
 import { loc } from 'shared/assets';
 
 export const CartScreen = ({ navigation }) => {
     const dispatch = useDispatch();
-    const onPressRemoveAll = useCallback(async () => {
-        const token = await getData(USER);
+    const token = useSelector(({ auth: { token = '' } = {} } = {}) => token);
+    const onPressRemoveAll = useCallback(() => {
         dispatch(removeProductsFromCart(token, true));
-    }, [dispatch, USER]);
+    }, [dispatch, token]);
     const totalPrice = useSelector(({ productsInCart: { total = '' } = {} } = {}) => total);
     const productsInCart = useSelector(({ productsInCart: { products = [] } = {} } = {}) => products).map(
         ({ thumb, name, key, quantity, price }) => (
