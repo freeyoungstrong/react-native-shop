@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { ProductsList, CategoriesList } from './components';
 import { Divider } from 'shared/components';
-import { addProductTocart, userDetails } from 'shared/redux/actions';
+import { fetchCart, userDetails } from 'shared/redux/actions';
 
 export const Main = ({ navigation }) => {
     // TODO:Fix analytics
@@ -24,7 +24,7 @@ export const Main = ({ navigation }) => {
     const token = useSelector(({ auth: { token = '' } = {} } = {}) => token);
     useEffect(() => {
         dispatch(userDetails(token));
-        dispatch(addProductTocart(token));
+        dispatch(fetchCart(token));
     }, [dispatch, token]);
 
     return (
