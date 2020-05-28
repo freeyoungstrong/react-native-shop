@@ -72,5 +72,12 @@
     "ask-internet": {
         "title": "No Internet connection!",
         "description": "Please check your Internet connection and try again."
+    },
+    "user-profile": {
+        "title": "My profile",
+        "firstname": "Firstname: %{firstname}",
+        "lastname": "Lastname: %{lastname}",
+        "email": "Email: %{email}",
+        "button": "Logout"
     }
 }

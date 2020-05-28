@@ -7,6 +7,7 @@ export const routes = {
     HOME: 'Home',
     MAP: 'Map',
     CART: 'Cart',
+    USER_PROFILE: 'UserProfile',
 };
 
 export const USER = 'USER';

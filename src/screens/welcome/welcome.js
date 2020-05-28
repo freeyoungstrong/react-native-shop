@@ -13,7 +13,7 @@ import { styles } from './styles';
 import { routes, USER } from 'shared/constants';
 import { colors } from 'shared/assets';
 import { getData } from 'shared/utils';
-import { fetchCategories, fetchProducts } from 'shared/redux/actions';
+import { fetchCategories, fetchProducts, loginSuccess } from 'shared/redux/actions';
 
 export const WelcomeScreen = ({ navigation }) => {
     const dispatch = useDispatch();
@@ -24,7 +24,9 @@ export const WelcomeScreen = ({ navigation }) => {
     }, [dispatch]);
 
     const onAnimationComplete = useCallback(async () => {
-        if (await getData(USER)) {
+        const token = await getData(USER);
+        if (token) {
+            dispatch(loginSuccess({ token }));
             navigation.navigate(routes.HOME, { screen: routes.MAIN });
         } else {
             navigation.navigate(routes.LOGIN);

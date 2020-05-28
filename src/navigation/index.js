@@ -4,10 +4,17 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator, DrawerContentScrollView, DrawerItem, DrawerItemList } from '@react-navigation/drawer';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import Share from 'react-native-share';
-import { useDispatch } from 'react-redux';
 
-import { LoginScreen, RegistrationScreen, Main, ProductDetails, WelcomeScreen, MapScreen, CartScreen } from 'screens';
-import { logout } from 'shared/redux/actions';
+import {
+    LoginScreen,
+    RegistrationScreen,
+    Main,
+    ProductDetails,
+    WelcomeScreen,
+    MapScreen,
+    CartScreen,
+    UserProfileScreen,
+} from 'screens';
 import { routes } from 'shared/constants';
 import { colors, loc } from 'shared/assets';
 import { styles } from './styles';
@@ -16,7 +23,6 @@ export const Navigator = () => {
     const RootStack = createStackNavigator();
     const DrawerStack = createDrawerNavigator();
     const HomeStack = createStackNavigator();
-    const dispatch = useDispatch();
 
     const onPressShare = useCallback(() => {
         const options = {
@@ -33,16 +39,11 @@ export const Navigator = () => {
             });
     }, []);
 
-    const onPressLogout = useCallback(async () => {
-        dispatch(logout());
-    }, [dispatch]);
-
     const CustomDrawerContent = props => {
         return (
             <DrawerContentScrollView {...props}>
                 <DrawerItemList {...props} />
                 <DrawerItem label={loc('drawer-navigation.share')} onPress={onPressShare} />
-                <DrawerItem label={loc('drawer-navigation.logout')} onPress={onPressLogout} />
             </DrawerContentScrollView>
         );
     };
@@ -51,6 +52,7 @@ export const Navigator = () => {
         return (
             <DrawerStack.Navigator drawerContent={props => <CustomDrawerContent {...props} />}>
                 <DrawerStack.Screen name={routes.MAIN} component={HomeStackNavigator} />
+                <DrawerStack.Screen name={loc('user-profile.title')} component={UserProfileScreen} />
                 <DrawerStack.Screen name={routes.MAP} component={MapScreen} />
                 <DrawerStack.Screen name={routes.CART} component={CartScreen} />
             </DrawerStack.Navigator>
