@@ -3,14 +3,12 @@ import { View, Text, ScrollView, Alert, Image } from 'react-native';
 import he from 'he';
 import ToastModule from 'react-native-toast-module';
 import PushNotification from 'react-native-push-notification';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { styles } from './styles';
 import { Button, Divider } from 'shared/components';
 import { loc } from 'shared/assets';
 import { addProductTocart } from 'shared/redux/actions';
-import { getData } from 'shared/utils';
-import { USER } from 'shared/constants';
 
 export const ProductDetails = ({ route }) => {
     const { product } = route.params;
@@ -19,11 +17,13 @@ export const ProductDetails = ({ route }) => {
         id,
     } = product;
     const dispatch = useDispatch();
+    const token = useSelector(({ auth: { token = '' } = {} } = {}) => token);
+
     const onPressButtonWishList = useCallback(() => {
         Alert.alert(loc('productDetails.buttonWishlist.message'));
     }, []);
-    const onPressButtonAddToCart = useCallback(async () => {
-        const token = await getData(USER);
+
+    const onPressButtonAddToCart = useCallback(() => {
         const quantity = 1;
         dispatch(addProductTocart(token, id, quantity));
         ToastModule.show('Product added');
@@ -39,7 +39,7 @@ export const ProductDetails = ({ route }) => {
             playSound: true,
             soundName: 'default',
         });
-    }, [dispatch, id]);
+    }, [dispatch, id, token]);
 
     // TODO: implement react-native-easy-markdown
     return (

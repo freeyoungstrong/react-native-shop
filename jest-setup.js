@@ -39,3 +39,11 @@ jest.mock('appcenter-crashes', () => {
         onSendingFailed: jest.fn(),
     };
 });
+
+jest.mock('react-native-keychain', () => {
+    return {
+        getGenericPassword: jest.fn(() => Promise.resolve()),
+        setGenericPassword: jest.fn(() => Promise.resolve()),
+        resetGenericPassword: jest.fn(() => Promise.resolve()),
+    };
+});

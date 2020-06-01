@@ -14,9 +14,7 @@ export const userDetails = token => async dispatch => {
     };
     try {
         const response = await getUserDetails(requestOptions);
-        console.log('RESPONSE', response);
         const result = await response.json();
-        console.log('RESULT', result);
         const { firstname, lastname, email } = result;
         dispatch(userDetailsSuccess({ firstname, lastname, email }));
     } catch (error) {

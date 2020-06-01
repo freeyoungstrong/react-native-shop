@@ -5,14 +5,14 @@ import LinearGradient from 'react-native-linear-gradient';
 import NetInfo from '@react-native-community/netinfo';
 import { useDispatch } from 'react-redux';
 import Analytics from 'appcenter-analytics';
+import * as Keychain from 'react-native-keychain';
 
 import { styles } from './styles';
 import { Input, Button, NavQuestion, ModalView } from 'shared/components';
 import { loc } from 'shared/assets';
-import { routes, USER } from 'shared/constants';
+import { routes } from 'shared/constants';
 import { colors } from 'shared/assets';
 import { login } from 'shared/redux/actions';
-import { getData } from 'shared/utils';
 
 export const LoginScreen = ({ navigation }) => {
     const [loginName, onChangeLoginName] = useState('');
@@ -34,7 +34,8 @@ export const LoginScreen = ({ navigation }) => {
 
         await dispatch(login({ loginName, password }));
 
-        if (await getData(USER)) {
+        const credentials = await Keychain.getGenericPassword();
+        if (credentials) {
             navigation.navigate(routes.HOME, { screen: routes.MAIN });
         } else {
             setModalVisible(true);
