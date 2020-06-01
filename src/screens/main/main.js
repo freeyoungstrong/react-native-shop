@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { ScrollView } from 'react-native';
+import { View } from 'react-native';
 import { hasCrashedInLastSession, lastSessionCrashReport } from 'appcenter-crashes';
 import { setEnabled } from 'appcenter-analytics';
 import { useDispatch, useSelector } from 'react-redux';
@@ -31,11 +31,11 @@ export const Main = ({ navigation }) => {
     return (
         <>
             <Header navigation={navigation} title={loc('login.title')} />
-            <ScrollView>
+            <View>
                 <CategoriesList />
                 <Divider />
                 <ProductsList navigation={navigation} />
-            </ScrollView>
+            </View>
         </>
     );
 };
