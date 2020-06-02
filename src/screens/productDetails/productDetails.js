@@ -4,6 +4,7 @@ import he from 'he';
 import ToastModule from 'react-native-toast-module';
 import PushNotification from 'react-native-push-notification';
 import { useDispatch, useSelector } from 'react-redux';
+import HTMLView from 'react-native-htmlview';
 
 import { styles } from './styles';
 import { Button, Divider } from 'shared/components';
@@ -41,7 +42,6 @@ export const ProductDetails = ({ route }) => {
         });
     }, [dispatch, id, token]);
 
-    // TODO: implement react-native-easy-markdown
     return (
         <ScrollView style={styles.wrap}>
             <View style={styles.container}>
@@ -61,7 +61,9 @@ export const ProductDetails = ({ route }) => {
             <Divider />
             <View style={styles.container}>
                 <Text style={styles.title}>{loc('productDetails.description')}</Text>
-                <Text style={styles.description}>{he.decode(description)}</Text>
+                <View style={styles.description}>
+                    <HTMLView value={he.decode(description)} stylesheet={styles} />
+                </View>
             </View>
             <View style={styles.buttons}>
                 <Button

@@ -38,9 +38,6 @@ export const styles = StyleSheet.create({
     },
     description: {
         marginHorizontal: 10,
-        fontSize: 17,
-        marginBottom: 5,
-        fontFamily: 'Roboto-Regular',
     },
     buttonColorOfDeviceStyle: {
         width: '20%',
@@ -58,7 +55,7 @@ export const styles = StyleSheet.create({
     buttonWishListStyle: {
         width: '50%',
         height: 40,
-        marginVertical: 5,
+        marginTop: 5,
         borderWidth: 1,
         backgroundColor: colors.white,
         justifyContent: 'center',
@@ -72,7 +69,7 @@ export const styles = StyleSheet.create({
     buttonAddToCartStyle: {
         width: '50%',
         height: 40,
-        marginVertical: 5,
+        marginTop: 5,
         backgroundColor: colors.seaBlue,
         justifyContent: 'center',
     },
@@ -81,5 +78,9 @@ export const styles = StyleSheet.create({
         textAlign: 'center',
         color: colors.white,
         fontFamily: 'Roboto-Bold',
+    },
+    p: {
+        fontSize: 17,
+        fontFamily: 'Roboto-Regular',
     },
 });
