@@ -37,7 +37,7 @@ export const LoginScreen = ({ navigation }) => {
         await dispatch(login({ loginName, password }));
 
         const credentials = await Keychain.getGenericPassword();
-        if (credentials) {
+        if (credentials.password) {
             navigation.navigate(routes.HOME, { screen: routes.MAIN });
         } else {
             setModalVisible(true);
@@ -57,44 +57,47 @@ export const LoginScreen = ({ navigation }) => {
     };
 
     return (
-        // <KeyboardAwareScrollView
-        // style={styles.scrollView}
-        // contentContainerStyle={styles.scrollContent}
-        // extraHeight={20}
-        // enableOnAndroid>
-
-        // TODO: KeyboardAwareScrollView + gradient background
         <LinearGradient
             colors={[colors.lightBlue, colors.lightPurple, colors.lightPink, colors.lightOrange]}
             style={modalVisible ? [styles.scrollContent, opacityStyle] : styles.scrollContent}>
-            <ModalView
-                visible={modalVisible}
-                onClose={setModalVisible}
-                title={loc('login.button.error.title')}
-                description={loc('login.button.error.message')}
-            />
-            <ModalView
-                visible={modalAskInternetVisible}
-                onClose={setModalAskInternetVisible}
-                title={loc('ask-internet.title')}
-                description={loc('ask-internet.description')}
-            />
-            <Text style={styles.title}>{loc('login.title')}</Text>
-            <Input onChangeText={onChangeLoginName} text={loginName} placeholder={loc('login.loginName')} />
-            <Input secure={true} onChangeText={onChangePassword} text={password} placeholder={loc('login.password')} />
-            <NavQuestion
-                title={loc('login.navQuestion1.title')}
-                onPress={onPressNavQuestionForgotPassword}
-                style={styles.navQuestion}
-            />
-            <Button
-                title={loc('login.button.title').toUpperCase()}
-                onPress={onPressSignIn}
-                buttonStyle={styles.buttonStyle}
-                buttonStyleTitle={styles.buttonTitle}
-            />
-            <NavQuestion title={loc('login.navQuestion2.title')} onPress={onPressNavQuestionSignUp} />
+            <KeyboardAwareScrollView
+                style={styles.scrollView}
+                contentContainerStyle={styles.scrollContent}
+                extraHeight={20}
+                enableOnAndroid>
+                <ModalView
+                    visible={modalVisible}
+                    onClose={setModalVisible}
+                    title={loc('login.button.error.title')}
+                    description={loc('login.button.error.message')}
+                />
+                <ModalView
+                    visible={modalAskInternetVisible}
+                    onClose={setModalAskInternetVisible}
+                    title={loc('ask-internet.title')}
+                    description={loc('ask-internet.description')}
+                />
+                <Text style={styles.title}>{loc('login.title')}</Text>
+                <Input onChangeText={onChangeLoginName} text={loginName} placeholder={loc('login.loginName')} />
+                <Input
+                    secure={true}
+                    onChangeText={onChangePassword}
+                    text={password}
+                    placeholder={loc('login.password')}
+                />
+                <NavQuestion
+                    title={loc('login.navQuestion1.title')}
+                    onPress={onPressNavQuestionForgotPassword}
+                    style={styles.navQuestion}
+                />
+                <Button
+                    title={loc('login.button.title').toUpperCase()}
+                    onPress={onPressSignIn}
+                    buttonStyle={styles.buttonStyle}
+                    buttonStyleTitle={styles.buttonTitle}
+                />
+                <NavQuestion title={loc('login.navQuestion2.title')} onPress={onPressNavQuestionSignUp} />
+            </KeyboardAwareScrollView>
         </LinearGradient>
-        // </KeyboardAwareScrollView>
     );
 };

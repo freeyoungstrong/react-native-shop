@@ -29,39 +29,37 @@ export const RegistrationScreen = ({ navigation }) => {
         navigation.navigate(routes.LOGIN);
     }, []);
     return (
-        // <KeyboardAwareScrollView
-        //     style={styles.scrollView}
-        //     contentContainerStyle={styles.scrollContent}
-        //     extraHeight={20}
-        //     enableOnAndroid>
-
-        // TODO: KeyboardAwareScrollView + gradient background
         <LinearGradient
             colors={[colors.lightBlue, colors.lightPurple, colors.lightPink, colors.lightOrange]}
             style={styles.scrollContent}>
-            <ModalView
-                visible={modalAskInternetVisible}
-                onClose={setModalAskInternetVisible}
-                title={loc('ask-internet.title')}
-                description={loc('ask-internet.description')}
-            />
-            <Text style={styles.title}>{loc('registration.title')}</Text>
-            <Input onChangeText={onChangeFullName} text={fullName} placeholder={loc('registration.fullName')} />
-            <Input onChangeText={onChangeEmail} value={email} placeholder={loc('registration.email')} />
-            <Input onChangeText={onChangePassword} value={password} placeholder={loc('registration.password')} />
-            <Input
-                onChangeText={onChangeConfirmPassword}
-                value={confirmPassword}
-                placeholder={loc('registration.confirmPassword')}
-            />
-            <Button
-                title={loc('registration.button.title').toUpperCase()}
-                onPress={onPressSignUp}
-                buttonStyle={styles.buttonStyle}
-                buttonStyleTitle={styles.buttonTitle}
-            />
-            <NavQuestion title={loc('registration.navQuestion.title')} onPress={onPressNavQuestion} />
-            {/* </KeyboardAwareScrollView> */}
+            <KeyboardAwareScrollView
+                style={styles.scrollView}
+                contentContainerStyle={styles.scrollContent}
+                extraHeight={20}
+                enableOnAndroid>
+                <ModalView
+                    visible={modalAskInternetVisible}
+                    onClose={setModalAskInternetVisible}
+                    title={loc('ask-internet.title')}
+                    description={loc('ask-internet.description')}
+                />
+                <Text style={styles.title}>{loc('registration.title')}</Text>
+                <Input onChangeText={onChangeFullName} text={fullName} placeholder={loc('registration.fullName')} />
+                <Input onChangeText={onChangeEmail} value={email} placeholder={loc('registration.email')} />
+                <Input onChangeText={onChangePassword} value={password} placeholder={loc('registration.password')} />
+                <Input
+                    onChangeText={onChangeConfirmPassword}
+                    value={confirmPassword}
+                    placeholder={loc('registration.confirmPassword')}
+                />
+                <Button
+                    title={loc('registration.button.title').toUpperCase()}
+                    onPress={onPressSignUp}
+                    buttonStyle={styles.buttonStyle}
+                    buttonStyleTitle={styles.buttonTitle}
+                />
+                <NavQuestion title={loc('registration.navQuestion.title')} onPress={onPressNavQuestion} />
+            </KeyboardAwareScrollView>
         </LinearGradient>
     );
 };
