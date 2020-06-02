@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
     },
     map: {
-        height: '90%',
-        width: '90%',
+        height: '100%',
+        width: '100%',
     },
 });

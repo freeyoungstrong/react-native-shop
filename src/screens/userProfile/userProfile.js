@@ -7,6 +7,7 @@ import { styles } from './styles';
 import { logout } from 'shared/redux/actions';
 import { routes } from 'shared/constants';
 import { loc } from 'shared/assets';
+import { Header } from 'shared/components';
 
 export const UserProfileScreen = ({ navigation }) => {
     const dispatch = useDispatch();
@@ -22,13 +23,7 @@ export const UserProfileScreen = ({ navigation }) => {
 
     return (
         <>
-            <View style={styles.header}>
-                <TouchableOpacity onPress={navigation.openDrawer}>
-                    <Icon size={35} name="menu" />
-                </TouchableOpacity>
-                <Text>{loc('user-profile.title')}</Text>
-                <View />
-            </View>
+            <Header navigation={navigation} title={loc('user-profile.title')} />
             <ScrollView>
                 <View style={styles.container}>
                     <Icon size={120} name="account" />

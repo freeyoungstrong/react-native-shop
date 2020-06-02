@@ -1,8 +1,6 @@
 import React, { useCallback } from 'react';
-import { Alert, TouchableOpacity } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator, DrawerContentScrollView, DrawerItem, DrawerItemList } from '@react-navigation/drawer';
-import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import Share from 'react-native-share';
 
 import {
@@ -17,7 +15,6 @@ import {
 } from 'screens';
 import { routes } from 'shared/constants';
 import { colors, loc } from 'shared/assets';
-import { styles } from './styles';
 
 export const Navigator = () => {
     const RootStack = createStackNavigator();
@@ -54,16 +51,7 @@ export const Navigator = () => {
                 <DrawerStack.Screen name={routes.MAIN} component={HomeStackNavigator} />
                 <DrawerStack.Screen name={loc('user-profile.title')} component={UserProfileScreen} />
                 <DrawerStack.Screen name={routes.MAP} component={MapScreen} />
-                <DrawerStack.Screen name={routes.CART} component={CartScreen} />
             </DrawerStack.Navigator>
-        );
-    };
-
-    const HeaderRight = () => {
-        return (
-            <TouchableOpacity style={styles.cart} onPress={() => Alert.alert('Move to cart screen')}>
-                <FontAwesomeIcon size={30} name="shopping-cart" />
-            </TouchableOpacity>
         );
     };
 
@@ -74,15 +62,21 @@ export const Navigator = () => {
                     name={routes.MAIN}
                     component={Main}
                     options={{
-                        headerStyle: { backgroundColor: colors.lightBlue, height: 100 },
-                        headerTintColor: colors.white,
-                        title: loc('login.title'),
-                        headerRight: HeaderRight,
+                        headerShown: false,
                     }}
                 />
                 <HomeStack.Screen
                     name={routes.PRODUCT_DETAILS}
                     component={ProductDetails}
+                    options={{
+                        headerStyle: { backgroundColor: colors.lightBlue },
+                        title: null,
+                        headerBackTitle: loc('common.back'),
+                    }}
+                />
+                <HomeStack.Screen
+                    name={routes.CART}
+                    component={CartScreen}
                     options={{
                         headerStyle: { backgroundColor: colors.lightBlue },
                         title: null,

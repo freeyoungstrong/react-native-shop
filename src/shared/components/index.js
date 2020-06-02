@@ -3,3 +3,4 @@ export * from './Input/input';
 export * from './NavQuestion/navQuestion';
 export * from './Modal/modal';
 export * from './Divider/divider';
+export * from './Header/header';

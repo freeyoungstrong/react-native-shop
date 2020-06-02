@@ -89,5 +89,8 @@
             "price": "Price: %{price}",
             "quantity": "Quantity: %{quantity}"
         }
+    },
+    "map": {
+        "title": "Map"
     }
 }

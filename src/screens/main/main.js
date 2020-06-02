@@ -5,8 +5,9 @@ import Analytics from 'appcenter-analytics';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { ProductsList, CategoriesList } from './components';
-import { Divider } from 'shared/components';
+import { Divider, Header } from 'shared/components';
 import { fetchCart, userDetails } from 'shared/redux/actions';
+import { loc } from 'shared/assets';
 
 export const Main = ({ navigation }) => {
     // TODO:Fix analytics
@@ -28,10 +29,13 @@ export const Main = ({ navigation }) => {
     }, [dispatch, token]);
 
     return (
-        <ScrollView>
-            <CategoriesList />
-            <Divider />
-            <ProductsList navigation={navigation} />
-        </ScrollView>
+        <>
+            <Header navigation={navigation} title={loc('login.title')} />
+            <ScrollView>
+                <CategoriesList />
+                <Divider />
+                <ProductsList navigation={navigation} />
+            </ScrollView>
+        </>
     );
 };
