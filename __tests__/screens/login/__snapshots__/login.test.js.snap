@@ -30,78 +30,100 @@ exports[`Login screen should render fine 1`] = `
     }
   }
 >
-  <ModalView
-    description="Login attempt failed! Please try again."
-    onClose={[Function]}
-    title="Error"
-    visible={false}
-  />
-  <ModalView
-    description="Please check your Internet connection and try again."
-    onClose={[Function]}
-    title="No Internet connection!"
-    visible={false}
-  />
-  <Text
-    style={
+  <KeyboardAwareScrollViewMock
+    contentContainerStyle={
       Object {
-        "color": "#118cbf",
-        "fontFamily": "Roboto-Regular",
-        "fontSize": 40,
-        "marginBottom": 60,
-        "marginHorizontal": 60,
-        "textAlign": "center",
-      }
-    }
-  >
-    Ecommerce Store
-  </Text>
-  <Input
-    onChangeText={[Function]}
-    placeholder="Login name"
-    text=""
-  />
-  <Input
-    onChangeText={[Function]}
-    placeholder="Password"
-    secure={true}
-    text=""
-  />
-  <NavQuestion
-    onPress={[Function]}
-    style={
-      Object {
-        "alignSelf": "flex-end",
-        "right": "7.5%",
-      }
-    }
-    title="Forgot password?"
-  />
-  <Button
-    buttonStyle={
-      Object {
-        "backgroundColor": "#118cbf",
-        "borderRadius": 10,
-        "height": 40,
+        "alignItems": "center",
+        "flexGrow": 1,
         "justifyContent": "center",
-        "marginVertical": 20,
-        "width": "85%",
       }
     }
-    buttonStyleTitle={
+    enableAutomaticScroll={true}
+    enableOnAndroid={true}
+    enableResetScrollToCoords={true}
+    extraHeight={20}
+    extraScrollHeight={0}
+    keyboardOpeningTime={250}
+    style={
       Object {
-        "color": "#FFFFFF",
-        "fontFamily": "Roboto-Bold",
-        "fontSize": 20,
-        "textAlign": "center",
+        "flex": 1,
       }
     }
-    onPress={[Function]}
-    title="SIGN IN"
-  />
-  <NavQuestion
-    onPress={[Function]}
-    title="New here? Sign up"
-  />
+    viewIsInsideTabBar={false}
+  >
+    <ModalView
+      description="Login attempt failed! Please try again."
+      onClose={[Function]}
+      title="Error"
+      visible={false}
+    />
+    <ModalView
+      description="Please check your Internet connection and try again."
+      onClose={[Function]}
+      title="No Internet connection!"
+      visible={false}
+    />
+    <Text
+      style={
+        Object {
+          "color": "#118cbf",
+          "fontFamily": "Roboto-Regular",
+          "fontSize": 40,
+          "marginBottom": 60,
+          "marginHorizontal": 60,
+          "textAlign": "center",
+        }
+      }
+    >
+      Ecommerce Store
+    </Text>
+    <Input
+      onChangeText={[Function]}
+      placeholder="Login name"
+      text=""
+    />
+    <Input
+      onChangeText={[Function]}
+      placeholder="Password"
+      secure={true}
+      text=""
+    />
+    <NavQuestion
+      onPress={[Function]}
+      style={
+        Object {
+          "alignSelf": "flex-end",
+          "right": "7.5%",
+        }
+      }
+      title="Forgot password?"
+    />
+    <Button
+      buttonStyle={
+        Object {
+          "backgroundColor": "#118cbf",
+          "borderRadius": 10,
+          "height": 40,
+          "justifyContent": "center",
+          "marginVertical": 20,
+          "width": "85%",
+        }
+      }
+      buttonStyleTitle={
+        Object {
+          "color": "#FFFFFF",
+          "fontFamily": "Roboto-Bold",
+          "fontSize": 20,
+          "textAlign": "center",
+        }
+      }
+      onPress={[Function]}
+      title="SIGN IN"
+    />
+    <NavQuestion
+      onPress={[Function]}
+      title="New here? Sign up"
+    />
+  </KeyboardAwareScrollViewMock>
 </LinearGradient>
 `;
