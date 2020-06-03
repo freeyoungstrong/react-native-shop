@@ -20,7 +20,7 @@ export const WelcomeScreen = ({ navigation }) => {
 
     useEffect(() => {
         dispatch(fetchCategories());
-        dispatch(fetchProducts());
+        dispatch(fetchProducts({ pageParameter: 1 }));
     }, [dispatch]);
 
     const onAnimationComplete = useCallback(async () => {
