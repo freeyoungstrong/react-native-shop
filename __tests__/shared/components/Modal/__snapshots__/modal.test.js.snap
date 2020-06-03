@@ -59,32 +59,10 @@ exports[`ModalView component should render fine 1`] = `
       >
         Description
       </Text>
-      <TouchableOpacity
-        activeOpacity={0.2}
+      <Button
         onPress={[Function]}
-        style={
-          Object {
-            "backgroundColor": "#118cbf",
-            "borderRadius": 10,
-            "height": 40,
-            "justifyContent": "center",
-            "width": "55%",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#FFFFFF",
-              "fontFamily": "Roboto-Bold",
-              "fontSize": 20,
-              "textAlign": "center",
-            }
-          }
-        >
-          OK
-        </Text>
-      </TouchableOpacity>
+        title="OK"
+      />
     </View>
   </View>
 </Component>

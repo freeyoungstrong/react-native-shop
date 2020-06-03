@@ -12,6 +12,7 @@ const mockNavigation = {
 };
 
 jest.spyOn(redux, 'useDispatch').mockImplementation(jest.fn());
+jest.spyOn(redux, 'useSelector').mockImplementation(jest.fn());
 jest.spyOn(Alert, 'alert').mockImplementation(jest.fn());
 
 describe('Login screen', () => {

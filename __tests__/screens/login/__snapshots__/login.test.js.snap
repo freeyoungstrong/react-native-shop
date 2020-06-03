@@ -51,13 +51,13 @@ exports[`Login screen should render fine 1`] = `
     }
     viewIsInsideTabBar={false}
   >
-    <ModalView
+    <Modal
       description="Login attempt failed! Please try again."
       onClose={[Function]}
       title="Error"
       visible={false}
     />
-    <ModalView
+    <Modal
       description="Please check your Internet connection and try again."
       onClose={[Function]}
       title="No Internet connection!"
@@ -99,24 +99,7 @@ exports[`Login screen should render fine 1`] = `
       title="Forgot password?"
     />
     <Button
-      buttonStyle={
-        Object {
-          "backgroundColor": "#118cbf",
-          "borderRadius": 10,
-          "height": 40,
-          "justifyContent": "center",
-          "marginVertical": 20,
-          "width": "85%",
-        }
-      }
-      buttonStyleTitle={
-        Object {
-          "color": "#FFFFFF",
-          "fontFamily": "Roboto-Bold",
-          "fontSize": 20,
-          "textAlign": "center",
-        }
-      }
+      fullWidth={true}
       onPress={[Function]}
       title="SIGN IN"
     />

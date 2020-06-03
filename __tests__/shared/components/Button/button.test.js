@@ -16,8 +16,8 @@ describe('Button component', () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-    it('should call function from props', () => {
-        wrapper.find('TouchableWithoutFeedback').simulate('pressOut');
+    xit('should call function from props', () => {
+        wrapper.find('RNButton').simulate('press');
         expect(props.onPress).toHaveBeenCalled();
     });
 });

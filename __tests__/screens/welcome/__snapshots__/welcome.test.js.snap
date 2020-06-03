@@ -4562,7 +4562,7 @@ exports[`Login screen should render fine 1`] = `
   />
   <AnimatedCircularProgress
     backgroundColor="#f0d1ba"
-    duration={3000}
+    duration={2000}
     easing={[Function]}
     fill={100}
     lineCap="round"

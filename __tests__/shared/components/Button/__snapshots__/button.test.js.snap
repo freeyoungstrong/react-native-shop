@@ -1,27 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Button component should render fine 1`] = `
-<TouchableWithoutFeedback
-  onPressIn={[Function]}
-  onPressOut={[Function]}
->
-  <AnimatedComponent
-    style={
-      Array [
-        undefined,
-        Object {
-          "transform": Array [
-            Object {
-              "scale": 1,
-            },
-          ],
-        },
-      ]
+<ForwardRef(Themed.Button)
+  buttonStyle={
+    Object {
+      "borderColor": "#000000",
+      "borderRadius": 10,
+      "height": 40,
+      "justifyContent": "center",
+      "marginVertical": 20,
     }
-  >
-    <Text>
-      Title
-    </Text>
-  </AnimatedComponent>
-</TouchableWithoutFeedback>
+  }
+  containerStyle={
+    Object {
+      "width": "50%",
+    }
+  }
+  disabled={false}
+  loading={false}
+  onPress={[MockFunction]}
+  title="Title"
+  titleStyle={
+    Array [
+      Object {
+        "fontFamily": "Roboto-Regular",
+        "fontSize": 18,
+        "textAlign": "center",
+      },
+      Object {
+        "color": "#FFFFFF",
+      },
+    ]
+  }
+  type="solid"
+/>
 `;
