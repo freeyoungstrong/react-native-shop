@@ -23,18 +23,4 @@ export const styles = StyleSheet.create({
         alignSelf: 'flex-end',
         right: '7.5%',
     },
-    buttonStyle: {
-        width: '85%',
-        height: 40,
-        marginVertical: 20,
-        borderRadius: 10,
-        backgroundColor: colors.seaBlue,
-        justifyContent: 'center',
-    },
-    buttonTitle: {
-        fontSize: 20,
-        textAlign: 'center',
-        color: colors.white,
-        fontFamily: 'Roboto-Bold',
-    },
 });

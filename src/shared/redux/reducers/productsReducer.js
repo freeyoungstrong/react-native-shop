@@ -5,12 +5,13 @@ let initialState = {
     error: null,
     currentPage: 0,
     pagesTotal: 1,
+    isLoading: false,
 };
 
 export const productsReducer = (state = initialState, action) => {
     switch (action.type) {
         case FETCH_PRODUCTS_REQUEST: {
-            return { ...state };
+            return { ...state, isLoading: true };
         }
         case FETCH_PRODUCTS_SUCCESS: {
             return {
@@ -18,10 +19,11 @@ export const productsReducer = (state = initialState, action) => {
                 products: [...state.products, ...action.products],
                 currentPage: parseInt(action.currentPage),
                 pagesTotal: parseInt(action.pagesTotal),
+                isLoading: false,
             };
         }
         case FETCH_PRODUCTS_FAILURE: {
-            return { ...state, error: action.payload };
+            return { ...state, error: action.payload, isLoading: false };
         }
         default:
             return state;

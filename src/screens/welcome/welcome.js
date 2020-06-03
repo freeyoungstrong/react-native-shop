@@ -42,7 +42,7 @@ export const WelcomeScreen = ({ navigation }) => {
                 size={170}
                 width={10}
                 fill={100}
-                duration={3000}
+                duration={2000}
                 rotation={0}
                 tintColor={colors.seaBlue}
                 backgroundColor={colors.lightOrange}

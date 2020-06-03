@@ -19,6 +19,7 @@ export const ProductDetails = ({ route }) => {
     } = product;
     const dispatch = useDispatch();
     const token = useSelector(({ auth: { token = '' } = {} } = {}) => token);
+    const isLoading = useSelector(state => state.productsInCart.isLoading);
 
     const onPressButtonWishList = useCallback(() => {
         Alert.alert(loc('productDetails.buttonWishlist.message'));
@@ -52,11 +53,7 @@ export const ProductDetails = ({ route }) => {
             <Divider />
             <View style={styles.container}>
                 <Text style={styles.title}>{loc('productDetails.selectColor')}</Text>
-                <Button
-                    title="Blue"
-                    buttonStyle={styles.buttonColorOfDeviceStyle}
-                    buttonStyleTitle={styles.buttonColorOfDeviceTitle}
-                />
+                <Button title="Blue" disabled type="outline" />
             </View>
             <Divider />
             <View style={styles.container}>
@@ -69,14 +66,12 @@ export const ProductDetails = ({ route }) => {
                 <Button
                     title={loc('productDetails.buttonWishlist.title')}
                     onPress={onPressButtonWishList}
-                    buttonStyle={styles.buttonWishListStyle}
-                    buttonStyleTitle={styles.buttonWishListTitle}
+                    type="outline"
                 />
                 <Button
                     title={loc('productDetails.buttonAddToCart.title')}
                     onPress={onPressButtonAddToCart}
-                    buttonStyle={styles.buttonAddToCartStyle}
-                    buttonStyleTitle={styles.buttonAddToCartTitle}
+                    isLoading={isLoading}
                 />
             </View>
         </ScrollView>

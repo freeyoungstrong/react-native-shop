@@ -3,12 +3,12 @@ import { Text, Alert } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import LinearGradient from 'react-native-linear-gradient';
 import NetInfo from '@react-native-community/netinfo';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setEnabled } from 'appcenter-analytics';
 import * as Keychain from 'react-native-keychain';
 
 import { styles } from './styles';
-import { Input, Button, NavQuestion, ModalView } from 'shared/components';
+import { Input, Button, NavQuestion, Modal } from 'shared/components';
 import { loc, colors } from 'shared/assets';
 import { routes } from 'shared/constants';
 import { login } from 'shared/redux/actions';
@@ -18,6 +18,7 @@ export const LoginScreen = ({ navigation }) => {
     const [password, onChangePassword] = useState('');
     const [modalVisible, setModalVisible] = useState(false);
     const [modalAskInternetVisible, setModalAskInternetVisible] = useState(false);
+    const isLoading = useSelector(state => state.auth.isLoading);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -65,13 +66,13 @@ export const LoginScreen = ({ navigation }) => {
                 contentContainerStyle={styles.scrollContent}
                 extraHeight={20}
                 enableOnAndroid>
-                <ModalView
+                <Modal
                     visible={modalVisible}
                     onClose={setModalVisible}
                     title={loc('login.button.error.title')}
                     description={loc('login.button.error.message')}
                 />
-                <ModalView
+                <Modal
                     visible={modalAskInternetVisible}
                     onClose={setModalAskInternetVisible}
                     title={loc('ask-internet.title')}
@@ -93,8 +94,8 @@ export const LoginScreen = ({ navigation }) => {
                 <Button
                     title={loc('login.button.title').toUpperCase()}
                     onPress={onPressSignIn}
-                    buttonStyle={styles.buttonStyle}
-                    buttonStyleTitle={styles.buttonTitle}
+                    isLoading={isLoading}
+                    fullWidth
                 />
                 <NavQuestion title={loc('login.navQuestion2.title')} onPress={onPressNavQuestionSignUp} />
             </KeyboardAwareScrollView>

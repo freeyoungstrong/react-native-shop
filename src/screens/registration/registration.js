@@ -5,7 +5,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import NetInfo from '@react-native-community/netinfo';
 
 import { styles } from './styles';
-import { Input, Button, NavQuestion, ModalView } from 'shared/components';
+import { Input, Button, NavQuestion, Modal } from 'shared/components';
 import { loc } from 'shared/assets';
 import { routes } from 'shared/constants';
 import { colors } from 'shared/assets';
@@ -16,6 +16,7 @@ export const RegistrationScreen = ({ navigation }) => {
     const [password, onChangePassword] = useState('');
     const [confirmPassword, onChangeConfirmPassword] = useState('');
     const [modalAskInternetVisible, setModalAskInternetVisible] = useState(false);
+
     const onPressSignUp = useCallback(() => {
         NetInfo.fetch().then(state => {
             if (!state.isConnected) {
@@ -25,9 +26,11 @@ export const RegistrationScreen = ({ navigation }) => {
             }
         });
     }, []);
+
     const onPressNavQuestion = useCallback(() => {
         navigation.navigate(routes.LOGIN);
     }, []);
+
     return (
         <LinearGradient
             colors={[colors.lightBlue, colors.lightPurple, colors.lightPink, colors.lightOrange]}
@@ -37,7 +40,7 @@ export const RegistrationScreen = ({ navigation }) => {
                 contentContainerStyle={styles.scrollContent}
                 extraHeight={20}
                 enableOnAndroid>
-                <ModalView
+                <Modal
                     visible={modalAskInternetVisible}
                     onClose={setModalAskInternetVisible}
                     title={loc('ask-internet.title')}
@@ -55,8 +58,8 @@ export const RegistrationScreen = ({ navigation }) => {
                 <Button
                     title={loc('registration.button.title').toUpperCase()}
                     onPress={onPressSignUp}
-                    buttonStyle={styles.buttonStyle}
-                    buttonStyleTitle={styles.buttonTitle}
+                    disabled
+                    fullWidth
                 />
                 <NavQuestion title={loc('registration.navQuestion.title')} onPress={onPressNavQuestion} />
             </KeyboardAwareScrollView>

@@ -39,46 +39,6 @@ export const styles = StyleSheet.create({
     description: {
         marginHorizontal: 10,
     },
-    buttonColorOfDeviceStyle: {
-        width: '20%',
-        height: 30,
-        margin: 10,
-        backgroundColor: colors.gray,
-        justifyContent: 'center',
-    },
-    buttonColorOfDeviceTitle: {
-        fontSize: 18,
-        fontFamily: 'Roboto-Thin',
-        textAlign: 'center',
-        color: colors.black,
-    },
-    buttonWishListStyle: {
-        width: '50%',
-        height: 40,
-        marginTop: 5,
-        borderWidth: 1,
-        backgroundColor: colors.white,
-        justifyContent: 'center',
-    },
-    buttonWishListTitle: {
-        fontSize: 18,
-        textAlign: 'center',
-        color: colors.black,
-        fontFamily: 'Roboto-Regular',
-    },
-    buttonAddToCartStyle: {
-        width: '50%',
-        height: 40,
-        marginTop: 5,
-        backgroundColor: colors.seaBlue,
-        justifyContent: 'center',
-    },
-    buttonAddToCartTitle: {
-        fontSize: 18,
-        textAlign: 'center',
-        color: colors.white,
-        fontFamily: 'Roboto-Bold',
-    },
     p: {
         fontSize: 17,
         fontFamily: 'Roboto-Regular',

@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { Text, TouchableOpacity, Image, ScrollView, View } from 'react-native';
+import { Text, Image, ScrollView, View } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { useSelector, useDispatch } from 'react-redux';
 import he from 'he';
@@ -7,6 +7,7 @@ import he from 'he';
 import { styles } from './styles';
 import { removeProductsFromCart } from 'shared/redux/actions';
 import { loc } from 'shared/assets';
+import { Button } from 'shared/components';
 
 export const CartScreen = () => {
     const dispatch = useDispatch();
@@ -14,6 +15,7 @@ export const CartScreen = () => {
     const onPressRemoveAll = useCallback(() => {
         dispatch(removeProductsFromCart(token, true));
     }, [dispatch, token]);
+    const isLoading = useSelector(state => state.productsInCart.isLoading);
     const totalPrice = useSelector(({ productsInCart: { total = '' } = {} } = {}) => total);
     const productsInCart = useSelector(({ productsInCart: { products = [] } = {} } = {}) => products).map(
         ({ thumb, name, key, quantity, price }) => (
@@ -41,10 +43,13 @@ export const CartScreen = () => {
                         {productsInCart}
                         <View style={styles.footer}>
                             <Text>{loc('cart.price', { totalPrice })}</Text>
-                            <TouchableOpacity style={styles.button} onPress={onPressRemoveAll}>
-                                <Text>{loc('cart.button')}</Text>
-                                <Icon size={30} name="delete" />
-                            </TouchableOpacity>
+                            <Button
+                                title={loc('cart.button')}
+                                onPress={onPressRemoveAll}
+                                icon={<Icon name="delete" size={30} />}
+                                isLoading={isLoading}
+                                type="outline"
+                            />
                         </View>
                     </>
                 ) : (

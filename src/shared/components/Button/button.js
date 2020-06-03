@@ -1,29 +1,35 @@
-import React from 'react';
-import { Text, Animated, TouchableWithoutFeedback } from 'react-native';
+import React, { useMemo } from 'react';
+import { Button as RNButton } from 'react-native-elements';
 
-export const Button = ({ title, onPress, buttonStyle, buttonStyleTitle } = {}) => {
-    const animatedValue = new Animated.Value(1);
-    const onPressIn = () => {
-        Animated.spring(animatedValue, {
-            toValue: 0.5,
-        }).start();
-    };
-    const onPressOut = () => {
-        Animated.spring(animatedValue, {
-            toValue: 1,
-            friction: 3,
-            tension: 40,
-        }).start();
-        onPress();
-    };
-    const animatedStyle = {
-        transform: [{ scale: animatedValue }],
-    };
+import { styles } from './styles';
+import { colors } from 'shared/assets';
+
+export const Button = ({
+    title,
+    onPress,
+    isLoading = false,
+    disabled = false,
+    icon,
+    type = 'solid',
+    fullWidth,
+} = {}) => {
+    const width = useMemo(() => (fullWidth ? '85%' : '50%'), [fullWidth]);
+    const color = useMemo(() => {
+        if (type === 'solid') return colors.white;
+        if (type === 'outline') return colors.black;
+    }, [type]);
+
     return (
-        <TouchableWithoutFeedback onPressIn={onPressIn} onPressOut={onPressOut}>
-            <Animated.View style={[buttonStyle, animatedStyle]}>
-                <Text style={buttonStyleTitle}>{title}</Text>
-            </Animated.View>
-        </TouchableWithoutFeedback>
+        <RNButton
+            title={title}
+            onPress={onPress}
+            loading={isLoading}
+            disabled={disabled}
+            icon={icon}
+            type={type}
+            buttonStyle={styles.button}
+            containerStyle={{ width }}
+            titleStyle={[styles.title, { color }]}
+        />
     );
 };
