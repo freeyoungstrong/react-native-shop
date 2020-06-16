@@ -33,10 +33,7 @@ export const ProductsList = ({ navigation }) => {
         } = item || {};
 
         return (
-            <TouchableOpacity
-                onPress={onPressProduct({ id, cell: { name, price, thumb, description } })}
-                key={id}
-                style={styles.productItem}>
+            <TouchableOpacity onPress={onPressProduct({ id, cell: { name, price, thumb, description } })} key={id}>
                 <ProductCard title={name} price={price} source={`http:${thumb}`} />
             </TouchableOpacity>
         );
@@ -51,6 +48,7 @@ export const ProductsList = ({ navigation }) => {
                 numColumns={2}
                 onEndReached={fetchNextProducts}
                 onEndReachedThreshold={0.1}
+                columnWrapperStyle={styles.columnStyle}
             />
         </View>
     );

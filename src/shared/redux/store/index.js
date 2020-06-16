@@ -9,7 +9,7 @@ const reducers = combineReducers({
     user: userReducer,
     categories: categoriesReducer,
     products: productsReducer,
-    productsInCart: cartReducer,
+    cart: cartReducer,
 });
 
 const store = createStore(reducers, composeWithDevTools(applyMiddleware(thunk)));

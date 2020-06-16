@@ -11,13 +11,11 @@ import { Button } from 'shared/components';
 
 export const CartScreen = () => {
     const dispatch = useDispatch();
+
     const token = useSelector(({ auth: { token = '' } = {} } = {}) => token);
-    const onPressRemoveAll = useCallback(() => {
-        dispatch(removeProductsFromCart(token, true));
-    }, [dispatch, token]);
-    const isLoading = useSelector(state => state.productsInCart.isLoading);
-    const totalPrice = useSelector(({ productsInCart: { total = '' } = {} } = {}) => total);
-    const productsInCart = useSelector(({ productsInCart: { products = [] } = {} } = {}) => products).map(
+    const isLoading = useSelector(({ cart: { isLoading = false } = {} } = {}) => isLoading);
+    const totalPrice = useSelector(({ cart: { total = '' } = {} } = {}) => total);
+    const productsInCart = useSelector(({ cart: { products = [] } = {} } = {}) => products).map(
         ({ thumb, name, key, quantity, price }) => (
             <View style={styles.productItem} key={key}>
                 <View style={styles.textContainer}>
@@ -34,6 +32,10 @@ export const CartScreen = () => {
             </View>
         ),
     );
+
+    const onPressRemoveAll = useCallback(() => {
+        dispatch(removeProductsFromCart(token, true));
+    }, [dispatch, token]);
 
     return (
         <ScrollView>

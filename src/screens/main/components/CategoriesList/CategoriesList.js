@@ -22,7 +22,7 @@ export const CategoriesList = () => {
     });
 
     return (
-        <ScrollView horizontal={true} style={styles.container}>
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={styles.container}>
             {categories ? categories : <Text>Here should be categories</Text>}
         </ScrollView>
     );

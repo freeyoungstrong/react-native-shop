@@ -19,7 +19,7 @@ export const ProductDetailsScreen = ({ route }) => {
     } = product;
     const dispatch = useDispatch();
     const token = useSelector(({ auth: { token = '' } = {} } = {}) => token);
-    const isLoading = useSelector(state => state.productsInCart.isLoading);
+    const isLoading = useSelector(({ cart: { isLoading = false } = {} } = {}) => isLoading);
 
     const onPressButtonWishList = useCallback(() => {
         Alert.alert(loc('productDetails.buttonWishlist.message'));
