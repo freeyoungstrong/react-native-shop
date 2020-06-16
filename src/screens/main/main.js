@@ -9,7 +9,7 @@ import { Divider, Header } from 'shared/components';
 import { fetchCart, userDetails } from 'shared/redux/actions';
 import { loc } from 'shared/assets';
 
-export const Main = ({ navigation }) => {
+export const MainScreen = ({ navigation }) => {
     const dispatch = useDispatch();
     const token = useSelector(({ auth: { token = '' } = {} } = {}) => token);
 
@@ -31,11 +31,9 @@ export const Main = ({ navigation }) => {
     return (
         <>
             <Header navigation={navigation} title={loc('login.title')} />
-            <View>
-                <CategoriesList />
-                <Divider />
-                <ProductsList navigation={navigation} />
-            </View>
+            <CategoriesList />
+            <Divider />
+            <ProductsList navigation={navigation} />
         </>
     );
 };

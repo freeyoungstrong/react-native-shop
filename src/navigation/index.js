@@ -6,8 +6,8 @@ import Share from 'react-native-share';
 import {
     LoginScreen,
     RegistrationScreen,
-    Main,
-    ProductDetails,
+    MainScreen,
+    ProductDetailsScreen,
     WelcomeScreen,
     MapScreen,
     CartScreen,
@@ -60,14 +60,14 @@ export const Navigator = () => {
             <HomeStack.Navigator>
                 <HomeStack.Screen
                     name={routes.MAIN}
-                    component={Main}
+                    component={MainScreen}
                     options={{
                         headerShown: false,
                     }}
                 />
                 <HomeStack.Screen
                     name={routes.PRODUCT_DETAILS}
-                    component={ProductDetails}
+                    component={ProductDetailsScreen}
                     options={{
                         headerStyle: { backgroundColor: colors.lightBlue },
                         title: null,

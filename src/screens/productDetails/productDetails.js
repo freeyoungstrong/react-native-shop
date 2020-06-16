@@ -11,7 +11,7 @@ import { Button, Divider } from 'shared/components';
 import { loc } from 'shared/assets';
 import { addProductTocart } from 'shared/redux/actions';
 
-export const ProductDetails = ({ route }) => {
+export const ProductDetailsScreen = ({ route }) => {
     const { product } = route.params;
     const {
         cell: { name, price, thumb, description },
