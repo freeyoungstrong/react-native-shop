@@ -1,4 +1,4 @@
-package com.ecommersestore;
+package com.reactnativeshop;
 
 import android.app.Application;
 import android.content.Context;

@@ -24,7 +24,7 @@
   [GMSServices provideAPIKey:@"AIzaSyCWedLAQ4y_BG-LHp2XNmxZouC0MA0TGuU"];
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
-                                                   moduleName:@"EcommerseStore"
+                                                   moduleName:@"ReactNativeShop"
                                             initialProperties:nil];
 
   // Define UNUserNotificationCenter

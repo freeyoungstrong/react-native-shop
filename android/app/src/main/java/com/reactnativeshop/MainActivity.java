@@ -1,4 +1,4 @@
-package com.ecommersestore;
+package com.reactnativeshop;
 
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.ReactRootView;
@@ -13,7 +13,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "EcommerseStore";
+    return "ReactNativeShop";
   }
 
   @Override
