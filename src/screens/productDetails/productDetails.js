@@ -41,7 +41,7 @@ export const ProductDetailsScreen = ({ route }) => {
             playSound: true,
             soundName: 'default',
         });
-    }, [dispatch, id, token]);
+    }, [dispatch, id, token, name]);
 
     return (
         <ScrollView style={styles.wrap}>

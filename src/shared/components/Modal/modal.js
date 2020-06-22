@@ -6,7 +6,7 @@ import { styles } from './styles';
 import { Button } from '../Button/button';
 
 export const Modal = ({ visible, onClose, title, description }) => {
-    const onPressButton = useCallback(() => onClose(!visible), [visible]);
+    const onPressButton = useCallback(() => onClose(!visible), [visible, onClose]);
     return (
         <RNModal animationType="slide" transparent={true} visible={visible}>
             <View style={styles.centeredView}>

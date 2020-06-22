@@ -15,8 +15,12 @@ export const Button = ({
 } = {}) => {
     const width = useMemo(() => (fullWidth ? '85%' : '50%'), [fullWidth]);
     const color = useMemo(() => {
-        if (type === 'solid') return colors.white;
-        if (type === 'outline') return colors.black;
+        if (type === 'solid') {
+            return colors.white;
+        }
+        if (type === 'outline') {
+            return colors.black;
+        }
     }, [type]);
 
     return (

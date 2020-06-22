@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { View } from 'react-native';
 import { hasCrashedInLastSession, lastSessionCrashReport } from 'appcenter-crashes';
 import { setEnabled } from 'appcenter-analytics';
 import { useDispatch, useSelector } from 'react-redux';
@@ -26,7 +25,7 @@ export const MainScreen = ({ navigation }) => {
             }
         };
         analytics();
-    }, [dispatch, token, setEnabled, hasCrashedInLastSession, lastSessionCrashReport]);
+    }, [dispatch, token]);
 
     return (
         <>

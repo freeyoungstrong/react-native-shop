@@ -1,12 +1,12 @@
 import React, { useCallback, useEffect } from 'react';
-import { Platform } from 'react-native';
+import { Platform, Alert } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import LottieView from 'lottie-react-native';
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
 import PushNotificationIOS from '@react-native-community/push-notification-ios';
 import PushNotification from 'react-native-push-notification';
 import ToastModule from 'react-native-toast-module';
-import Crashes from 'appcenter-crashes';
+import Crashes, { UserConfirmation } from 'appcenter-crashes';
 import { useDispatch } from 'react-redux';
 import * as Keychain from 'react-native-keychain';
 
@@ -31,7 +31,7 @@ export const WelcomeScreen = ({ navigation }) => {
         } else {
             navigation.navigate(routes.LOGIN);
         }
-    }, []);
+    }, [dispatch, navigation]);
 
     return (
         <LinearGradient

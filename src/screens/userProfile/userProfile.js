@@ -15,12 +15,12 @@ export const UserProfileScreen = ({ navigation }) => {
     const firstname = useSelector(({ user: { firstname = '' } = {} } = {}) => firstname);
     const lastname = useSelector(({ user: { lastname = '' } = {} } = {}) => lastname);
     const email = useSelector(({ user: { email = '' } = {} } = {}) => email);
-    const isLoading = useSelector(state => state.user.isLoading);
+    const isLoading = useSelector(({ user: { isLoading = false } = {} } = {}) => isLoading);
 
     const onPressLogout = useCallback(() => {
         dispatch(logout());
         navigation.navigate(routes.LOGIN);
-    }, [dispatch]);
+    }, [dispatch, navigation]);
 
     return (
         <>

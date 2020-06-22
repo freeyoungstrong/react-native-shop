@@ -6,7 +6,7 @@ import he from 'he';
 import { styles } from './styles';
 
 export const CategoriesList = () => {
-    const categories = useSelector(state => state.categories.categories).map(category => {
+    const categories = useSelector(({ categories: { categories = [] } = {} } = {}) => categories).map(category => {
         const { category_id, thumb, name } = category;
         return (
             <TouchableOpacity style={styles.categoryContainer} key={category_id}>
@@ -23,7 +23,7 @@ export const CategoriesList = () => {
 
     return (
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={styles.container}>
-            {categories ? categories : <Text>Here should be categories</Text>}
+            {categories.length > 0 ? categories : <Text>Here should be categories</Text>}
         </ScrollView>
     );
 };

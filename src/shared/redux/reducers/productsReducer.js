@@ -17,8 +17,8 @@ export const productsReducer = (state = initialState, action) => {
             return {
                 ...state,
                 products: [...state.products, ...action.products],
-                currentPage: parseInt(action.currentPage),
-                pagesTotal: parseInt(action.pagesTotal),
+                currentPage: parseInt(action.currentPage, 10),
+                pagesTotal: parseInt(action.pagesTotal, 10),
                 isLoading: false,
             };
         }

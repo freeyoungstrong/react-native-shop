@@ -25,11 +25,11 @@ export const RegistrationScreen = ({ navigation }) => {
                 navigation.navigate(routes.HOME, { screen: routes.MAIN });
             }
         });
-    }, []);
+    }, [navigation]);
 
     const onPressNavQuestion = useCallback(() => {
         navigation.navigate(routes.LOGIN);
-    }, []);
+    }, [navigation]);
 
     return (
         <LinearGradient

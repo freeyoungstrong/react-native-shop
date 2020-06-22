@@ -18,7 +18,7 @@ export const LoginScreen = ({ navigation }) => {
     const [password, onChangePassword] = useState('');
     const [modalVisible, setModalVisible] = useState(false);
     const [modalAskInternetVisible, setModalAskInternetVisible] = useState(false);
-    const isLoading = useSelector(state => state.auth.isLoading);
+    const isLoading = useSelector(({ auth: { isLoading = false } = {} } = {}) => isLoading);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -26,7 +26,7 @@ export const LoginScreen = ({ navigation }) => {
             await setEnabled(true);
         };
         analytics();
-    }, [setEnabled]);
+    }, []);
 
     const onPressSignIn = useCallback(async () => {
         NetInfo.fetch().then(state => {
@@ -43,7 +43,7 @@ export const LoginScreen = ({ navigation }) => {
         } else {
             setModalVisible(true);
         }
-    }, [dispatch, loginName, password]);
+    }, [navigation, dispatch, loginName, password]);
 
     const onPressNavQuestionForgotPassword = useCallback(() => {
         Alert.alert(loc('login.navQuestion1.move'));
@@ -51,7 +51,7 @@ export const LoginScreen = ({ navigation }) => {
 
     const onPressNavQuestionSignUp = useCallback(() => {
         navigation.navigate(routes.REGISTRATION);
-    }, []);
+    }, [navigation]);
 
     const opacityStyle = {
         opacity: 0.5,
